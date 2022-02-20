@@ -1,0 +1,10 @@
+daphne BlogApp.asgi:application
+        or
+gunicorn BlogApp.asgi:application -w 2 -k uvicorn.workers.UvicornWorker
+
+celery -A BlogApp worker -l INFO
+celery -A BlogApp beat -l INFO
+
+sudo -i -u postgres
+psql
+CREATE DATABASE blogapp;

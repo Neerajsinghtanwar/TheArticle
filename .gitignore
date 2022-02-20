@@ -1,0 +1,10 @@
+.idea
+venv
+media/background
+media/thumbnail
+media/profile
+__pycache__
+#/blog/migrations
+#/accounts/migrations
+#/notifications/migrations
+db.sqlite3

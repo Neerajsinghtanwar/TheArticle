@@ -1,0 +1,451 @@
+
+.padding {
+    padding: 3rem !important;
+}
+
+.card-img-top {
+    height: 300px
+}
+
+.card-no-border .card {
+    border-color: #d7dfe3;
+    border-radius: 4px;
+    margin-bottom: 30px;
+    -webkit-box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.05);
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.05)
+}
+
+.card-body {
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    padding: 1.25rem
+}
+
+.pro-img {
+    margin-left: 15px;
+    margin-top: -80px;
+    margin-bottom: 20px;
+	cursor: pointer;
+}
+
+.little-profile .pro-img img {
+    -webkit-box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    border-radius: 100%
+}
+
+.m-b-0 {
+    margin-bottom: 0px
+}
+
+.h3 {
+    line-height: 30px;
+    /*font-size: 21px*/
+	font-size: 30px;
+    font-weight: 400;
+}
+
+.h4{
+	line-height: 30px;
+    font-size: 40px;
+    font-weight: 600 !important;
+}
+
+.btn-rounded.btn-md {
+	margin-top: 20px;
+    padding: 6px 75px;
+    font-size: 16px
+}
+
+.btn-primary,
+.btn-primary.disabled {
+    background: #7460ee;
+    border: 1px solid #7460ee;
+    -webkit-box-shadow: 0 2px 2px 0 rgba(116, 96, 238, 0.14), 0 3px 1px -2px rgba(116, 96, 238, 0.2), 0 1px 5px 0 rgba(116, 96, 238, 0.12);
+    box-shadow: 0 2px 2px 0 rgba(116, 96, 238, 0.14), 0 3px 1px -2px rgba(116, 96, 238, 0.2), 0 1px 5px 0 rgba(116, 96, 238, 0.12);
+    -webkit-transition: 0.2s ease-in;
+    -o-transition: 0.2s ease-in;
+    transition: 0.2s ease-in
+}
+
+.btn-rounded {
+    border-radius: 60px;
+    padding: 7px 18px
+}
+
+.m-t-20 {
+    margin-top: 20px
+}
+
+.p-box {
+
+}
+
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+    color: #455a64;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@import url("https://fonts.googleapis.com/css2?family=Baloo+2&display=swap");
+/* This pen */
+.dashCardBody {
+	 padding: 40px;
+}
+
+ .light {
+	 background: #f3f5f7;
+}
+ a, a:hover {
+	 text-decoration: none;
+	 transition: color 0.3s ease-in-out;
+}
+/* Cards */
+ .postcard {
+	 font-family: "Baloo 2", cursive;
+	 font-size: 16px;
+	 text-rendering: optimizeLegibility;
+	 font-weight: initial;
+
+	 flex-wrap: wrap;
+	 display: flex;
+	 box-shadow: 0 4px 21px -12px rgba(0, 0, 0, 0.66);
+	 border-radius: 10px;
+	 margin: 0 0 2rem 0;
+	 overflow: hidden;
+	 position: relative;
+	 color: #fff;
+}
+ .postcard.light {
+	 background-color: #e1e5ea;
+}
+ .postcard .t-dark {
+	 color: #18151f;
+}
+ .postcard a {
+	 color: inherit;
+}
+ .postcard h1, .postcard .h1 {
+	 margin-bottom: 0.5rem;
+	 font-weight: 500;
+	 line-height: 1.2;
+}
+ .postcard .small {
+	 font-size: 80%;
+}
+ .postcard .postcard__title {
+	 font-size: 1.75rem;
+}
+ .postcard .postcard__img {
+	 max-height: 180px;
+	 width: 100%;
+	 object-fit: cover;
+	 position: relative;
+}
+ .postcard .postcard__img_link {
+	 display: contents;
+}
+ .postcard .postcard__bar {
+	 width: 50px;
+	 height: 10px;
+	 margin: 10px 0;
+	 border-radius: 5px;
+	 background-color: #424242;
+	 transition: width 0.2s ease;
+}
+ .postcard .postcard__text {
+	 padding: 1.5rem;
+	 position: relative;
+	 display: flex;
+	 flex-direction: column;
+}
+ .postcard .postcard__preview-txt {
+	 overflow: hidden;
+	 text-overflow: ellipsis;
+	 text-align: justify;
+	 height: 100%;
+}
+ .postcard:before {
+	 content: "";
+	 position: absolute;
+	 top: 0;
+	 right: 0;
+	 bottom: 0;
+	 left: 0;
+	 background-image: linear-gradient(-70deg, #424242, transparent 50%);
+	 opacity: 1;
+	 border-radius: 10px;
+}
+ .postcard:hover .postcard__bar {
+	 width: 100px;
+}
+ @media screen and (min-width: 769px) {
+	 .postcard {
+		 flex-wrap: inherit;
+	}
+	 .postcard .postcard__title {
+		 font-size: 2rem;
+	}
+	 .postcard .postcard__img {
+		 max-width: 300px;
+		 max-height: 100%;
+		 transition: transform 0.3s ease;
+	}
+	 .postcard .postcard__text {
+		 padding: 3rem;
+		 width: 100%;
+	}
+	 .postcard .media.postcard__text:before {
+		 content: "";
+		 position: absolute;
+		 display: block;
+		 background: #18151f;
+		 top: -20%;
+		 height: 130%;
+		 width: 55px;
+	}
+	 .postcard:hover .postcard__img {
+		 transform: scale(1.1);
+	}
+	 .postcard:nth-child(2n+1) {
+		 flex-direction: row;
+	}
+	 .postcard:nth-child(2n+0) {
+		 flex-direction: row-reverse;
+	}
+	 .postcard:nth-child(2n+1) .postcard__text::before {
+		 left: -12px !important;
+		 transform: rotate(4deg);
+	}
+	 .postcard:nth-child(2n+0) .postcard__text::before {
+		 right: -12px !important;
+		 transform: rotate(-4deg);
+	}
+}
+ @media screen and (min-width: 1024px) {
+	 .postcard__text {
+		 padding: 2rem 3.5rem;
+	}
+	 .postcard__text:before {
+		 content: "";
+		 position: absolute;
+		 display: block;
+		 top: -20%;
+		 height: 130%;
+		 width: 55px;
+	}
+	 .postcard.light .postcard__text:before {
+		 background: #e1e5ea;
+	}
+}
+/* COLORS */
+
+ .yellow .postcard__title:hover {
+	 color: #bdbb49;
+}
+ .yellow .postcard__bar {
+	 background-color: #bdbb49;
+}
+ .yellow::before {
+	 background-image: linear-gradient(-30deg, rgba(189, 187, 73, 0.1), transparent 50%);
+}
+ .yellow:nth-child(2n)::before {
+	 background-image: linear-gradient(30deg, rgba(189, 187, 73, 0.1), transparent 50%);
+}
+ @media screen and (min-width: 769px) {
+
+	 .yellow::before {
+		 background-image: linear-gradient(-80deg, rgba(189, 187, 73, 0.1), transparent 50%);
+	}
+	 .yellow:nth-child(2n)::before {
+		 background-image: linear-gradient(80deg, rgba(189, 187, 73, 0.1), transparent 50%);
+	}
+}
+
+.homeFab3{
+	font-size: 20px;
+    color: #615757!important;
+	/*margin-right: 233px;*/
+	width: 121px;
+	cursor: pointer;
+	transition: 0.2s;
+}
+
+.homeFab3:hover{
+    color: #000000 !important;
+	transition: 0.2s;
+}
+
+.homeProfile-pic{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    /* left: -13px; */
+    /* margin-right: -27px; */
+    margin-left: 10px;
+}
+
+.userDetail{
+}
+
+.home-timestamp{
+	font-size: 15px;
+    color: #00000080;
+    font-weight: 600;
+}
+
+.home-dotButton{
+	cursor: pointer;
+	float: right;
+	padding: 12px;
+    padding-top: 9px;
+	margin-top: 10px;
+}
+
+.home-dotButton:hover{
+	background: rgb(154 154 154 / 50%);
+	border-radius: 50%;
+    height: 40px;
+    width: 40px;
+}
+
+.dash-hr{
+	margin-bottom: -56px;
+}
+
+.profile-username{
+	font-size: 18px;
+	font-weight: bold;
+	margin-bottom: 4px;
+}
+
+.followers {
+    font-size: 12px
+}
+
+.btn_font {
+	font-size: 19px;
+	font-weight: 600;
+	color: #545454;
+}
+
+.date {
+    font-size: 11px
+}
+
+.comment-text {
+    font-size: 12px
+}
+
+.fs-12 {
+    font-size: 12px
+}
+
+.shadow-none {
+    box-shadow: none
+}
+
+.name {
+    color: #007bff
+}
+
+.cursor:hover {
+    color: blue
+}
+
+.cursor {
+    cursor: pointer
+}
+
+.textarea {
+    resize: none
+}
+
+.afw{
+	text-align: center;
+	cursor: pointer;
+}
+
+.comment-like-text{
+	/*float: right;*/
+	cursor: pointer;
+	font-weight: bold;
+	color: #7979fc;
+}
+
+.comment-like-text:hover{
+	/*float: right;*/
+
+	font-weight: bold;
+	color: #4a4ae3;
+}
+
+.comment-like-button{
+	margin-top: -7px;
+	margin-left: 51px;
+}
+
+.changeProfilePic {
+	display: none;
+}
+
+.pro-img:hover .changeProfilePic {
+position: absolute;
+    display: block;
+    top: 63%;
+    left: 202%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    /* background-color: #555; */
+     color: white;
+    font-size: 70px;
+    /* padding: 12px 24px; */
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: center;
+    opacity: 0.4;
+}
+
+.changeBackgroundPic {
+	display: none;
+}
+
+.backg-pic:hover .changeBackgroundPic {
+position: absolute;
+    display: block;
+    top: 3%;
+    left: 93.5%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    /* background-color: #555; */
+     color: white;
+    font-size: 70px;
+    /* padding: 12px 24px; */
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: center;
+    opacity: 0.4;
+}

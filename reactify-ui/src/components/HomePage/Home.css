@@ -1,0 +1,135 @@
+/*@import url(https://fonts.googleapis.com/css?family=Roboto);*/
+
+.cardBody {
+  font-family: 'Roboto', sans-serif;
+    padding-top: 100px;
+
+}
+
+
+/*search-bar*/
+.search-box{
+  position: absolute;
+  left: 24%;
+  top: 1%;
+  background:#d6e5fa;
+  border-radius: 40px;
+
+}
+
+.search-btn{
+  color: #9fc525;
+  float: right;
+  width:50px;
+  height: 50px;
+  /*border-radius: 50%;*/
+  /*background: #a0a2a9;*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.search-txt{
+  border: none;
+  background: none;
+  outline: none;
+  float: left;
+  padding: 17px;
+  color: #484646;
+  font-size: 16px;
+  transition: 0.4s;
+  width: 640px;
+}
+
+
+.myBtn {
+  font-family: "Montserrat", sans-serif !important;
+  float: right;
+    font-weight: 500 !important;
+    font-size: 16px !important;
+    letter-spacing: 1px !important;
+    display: inline-block !important;
+    padding: 4px 32px !important;
+    border-radius: 50px !important;
+    transition: 0.5s !important;
+    color: #000000 !important;
+    background-color: #FCEE14 !important;
+    border: black 1px solid !important;
+
+}
+
+.cat_nav {
+  margin-top: 10px !important;
+}
+
+.h-2 {
+  color: #b8b8b8 !important;
+    cursor: pointer;
+}
+
+.h-2:hover {
+  color: white !important;
+    font-size: 18px;
+    border-color: transparent !important;
+}
+
+.h-2.active {
+  color: white !important;
+    font-size: 18px;
+    background-color: transparent !important;
+    border-color: transparent !important;
+}
+
+
+.today {
+  text-align: center;
+  font-weight: bold;
+  font-size: 30px;
+}
+
+.section-header {
+  /*color: #fff;*/
+    margin-bottom: 40px;
+    text-align: center;
+    position: relative;
+}
+
+.section-header h1::before {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 200px;
+    height: 1px;
+    background: #ddd;
+    bottom: -5px;
+    left: calc(50% - 100px);
+}
+
+.section-header h1::after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: #18d26e;
+    bottom: -6px;
+    left: calc(50% - 30px);
+}
+
+.searchResult{
+    background: #a6a6a6;
+    /*margin-top: 130px;*/
+    padding: 15px;
+    border-radius: 5%;
+}
+
+.commentsHeight{
+    max-height: 300px;
+    overflow-y: auto;
+
+}
+
+.profile-username{
+    color: #212529;
+}
