@@ -371,3 +371,28 @@ from django.views.generic import TemplateView
 from django.views.decorators.cache import never_cache
 
 index = never_cache(TemplateView.as_view(template_name='index.html'))
+
+
+
+class TestApi(APIView):
+
+    def get(self, request):
+        catList = []
+        for i in vars(Categories):
+            if '_' in i:
+                continue
+            else:
+                catList.append(i.lower())
+
+        context = dict()
+        context['name1'] = 'Neeraj'
+        context['name2'] = 'Neerajd'
+        context['name3'] = 'Neerfdfdaj'
+        context['name4'] = 'Neefraj'
+        context['name5'] = 'Neerfdaj'
+        context['name6'] = 'Neerafdgj'
+        context['name7'] = 'Neerfdaj'
+        context['name8'] = 'Neerfdaj'
+        context['name88'] = 'Needfraj'
+        context['name9'] = 'Neerdfaj'
+        return JsonResponse(context)

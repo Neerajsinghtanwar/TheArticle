@@ -1,6 +1,6 @@
 import React from "react";
 import './Login.css';
-import {axios} from "../../Store/actions/actions";
+import {axios, url} from "../../Store/actions/actions";
 import {Redirect} from "react-router-dom";
 import {connect} from "react-redux";
 import {userLogin, notifications} from "../../Store/actions/actions";
@@ -148,7 +148,7 @@ class login extends React.Component {
                             <div className="form-icon">
                                 <img
                                     style={{height: "110px", width: "110px" }}
-                                     src="http://127.0.0.1:8000/media/images/profilePic.png"
+                                     src={url+"media/images/profilePic.png"}
                                      alt="user"/>
                             </div>
                             <div className="form-group">
@@ -163,7 +163,7 @@ class login extends React.Component {
                             <div className="form-group">
                                 <button type="button" className="btn btn-block create-account"
                                     onClick={this.login}
-                                >Login</button>
+                                >Loginnnnnnnnnnnnnnn</button>
                             </div>
                             <p style={{color: "red", textAlign: "left"}} id='login-error'></p>
                         </form>
