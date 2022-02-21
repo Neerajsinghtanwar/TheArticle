@@ -4,7 +4,3 @@ media/background
 media/thumbnail
 media/profile
 __pycache__
-#db.sqlite3
-#Procfile
-#celerybeat-schedule
-#commands.txt
