@@ -8,3 +8,5 @@ celery -A BlogApp beat -l INFO
 sudo -i -u postgres
 psql
 CREATE DATABASE blogapp;
+
+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
