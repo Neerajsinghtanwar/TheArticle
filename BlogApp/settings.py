@@ -28,8 +28,8 @@ SECRET_KEY = 'django-insecure-zo9l28+lajrfw1vezmyu!-*$6i$$ssy*&ase)m#4&6m44odjax
 DEBUG = True
 # DEBUG = False   # For production
 #
-# ALLOWED_HOSTS = ['*']
-ALLOWED_HOSTS = ['15.206.147.220']   # For production
+ALLOWED_HOSTS = ['*']
+# ALLOWED_HOSTS = ['15.206.147.220']   # For production
 
 # Application definition
 
@@ -233,4 +233,4 @@ CELERY_TIMEZONE = 'Asia/Kolkata'
 import django
 django.setup()
 
-BASE_URL = 'http://15.206.147.220/'
+# BASE_URL = 'http://15.206.147.220/'
