@@ -59,7 +59,7 @@ CKEDITOR_UPLOAD_PATH = 'uploads/'
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
-    # 'whitenoise.middleware.WhiteNoiseMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     "corsheaders.middleware.CorsMiddleware",
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -155,8 +155,7 @@ USE_TZ = False
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
-STATIC_DIR = os.path.join(BASE_DIR, 'build', 'static')
+STATIC_DIR = os.path.join(BASE_DIR, 'static')
 
 STATICFILES_DIRS = [STATIC_DIR]
 
@@ -196,7 +195,16 @@ CKEDITOR_CONFIGS = {
 
 CORS_ORIGIN_ALLOW_ALL = True
 
-CORS_ALLOW_CREDENTIALS = True
+CORS_ORIGIN_WHITELIST = [
+    'http://the-aarticle.herokuapp.com',
+]
+
+CORS_ALLOW_HEADERS = [
+    "access-control-allow-origin",
+]
+
+
+# CORS_ALLOW_CREDENTIALS = True
 
 # CORS_ALLOWED_ORIGINS = [
 #     "http://localhost:3000"
