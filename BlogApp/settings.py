@@ -25,8 +25,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-zo9l28+lajrfw1vezmyu!-*$6i$$ssy*&ase)m#4&6m44odjax'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
-# DEBUG = False   # For production
+# DEBUG = True
+DEBUG = False   # For production
 #
 ALLOWED_HOSTS = ['*']
 # ALLOWED_HOSTS = ['15.206.147.220']   # For production
@@ -148,7 +148,7 @@ USE_I18N = True
 
 USE_L10N = True
 
-USE_TZ = False
+USE_TZ = True
 
 
 # Static files (CSS, JavaScript, Images)
@@ -165,11 +165,11 @@ STATICFILES_DIRS = [STATIC_DIR]
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-INTERNAL_IPS = [
+# INTERNAL_IPS = [
     # ...
     # "127.0.0.1",
     # ...
-]
+# ]
 
 
 CHANNEL_LAYERS = {
@@ -198,9 +198,9 @@ CORS_ORIGIN_ALLOW_ALL = True
 
 CORS_ALLOW_CREDENTIALS = True
 
-CORS_ALLOWED_ORIGINS = [
-    "http://localhost:3000"
-]
+# CORS_ALLOWED_ORIGINS = [
+#     "http://localhost:3000"
+# ]
 
 
 # REST_FRAMEWORK = {
