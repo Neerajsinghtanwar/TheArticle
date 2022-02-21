@@ -4,7 +4,7 @@ media/background
 media/thumbnail
 media/profile
 __pycache__
-#/blog/migrations
-#/accounts/migrations
-#/notifications/migrations
+Procfile
 db.sqlite3
+commands.txt
+celerybeat-schedule
