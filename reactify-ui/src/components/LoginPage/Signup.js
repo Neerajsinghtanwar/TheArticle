@@ -1,6 +1,6 @@
 import React from "react";
 import './Login.css';
-import {axios} from "../../Store/actions/actions";
+import {axios, url} from "../../Store/actions/actions";
 import {Link, Redirect} from "react-router-dom";
 
 class signup extends React.Component {
@@ -116,7 +116,7 @@ class signup extends React.Component {
                             <div className="form-icon">
                                 <img
                                     style={{height: "110px", width: "110px" }}
-                                     src="http://127.0.0.1:8000/media/images/profilePic.png"
+                                     src={url+"media/images/profilePic.png"}
                                      alt="user"/>
                             </div>
                             <div className="form-group">

@@ -1,6 +1,6 @@
 import React from "react";
 import './Login.css';
-import {axios, url} from "../../Store/actions/actions";
+import {axios, url, wsUrl} from "../../Store/actions/actions";
 import {Redirect} from "react-router-dom";
 import {connect} from "react-redux";
 import {userLogin, notifications} from "../../Store/actions/actions";
@@ -22,7 +22,7 @@ class login extends React.Component {
     }
 
     connectWebsocket = async () => {
-        let ws = await new WebSocket(`ws://127.0.0.1:8000/ws/notify/${this.props.user.username}`)
+        let ws = await new WebSocket(`${wsUrl}ws/notify/${this.props.user.username}`)
 
         ws.onopen = await function () {
             console.log('Websocket connection open...')
@@ -163,7 +163,7 @@ class login extends React.Component {
                             <div className="form-group">
                                 <button type="button" className="btn btn-block create-account"
                                     onClick={this.login}
-                                >Loginnnnnnnnnnnnnnn</button>
+                                >Login</button>
                             </div>
                             <p style={{color: "red", textAlign: "left"}} id='login-error'></p>
                         </form>

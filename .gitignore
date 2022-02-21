@@ -8,3 +8,6 @@ __pycache__
 #/accounts/migrations
 #/notifications/migrations
 db.sqlite3
+Procfile
+celerybeat-schedule
+commands.txt

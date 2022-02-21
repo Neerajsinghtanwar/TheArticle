@@ -2,7 +2,7 @@ import React, {useCallback} from "react";
 import './Home.css'
 import {connect} from "react-redux";
 import {Link, Redirect} from "react-router-dom";
-import {axios} from "../../Store/actions/actions";
+import {axios, url} from "../../Store/actions/actions";
 
 class home extends React.Component {
 
@@ -77,7 +77,7 @@ class home extends React.Component {
     async search(data) {
 
         let token = await this.props.user.token
-        let result = await fetch(`http://127.0.0.1:8000/search/${data===''?'e-m-p-t-y':data}`, token);
+        let result = await fetch(`${url}search/${data===''?'e-m-p-t-y':data}`, token);
         result = await result.json()
         this.setState({searchResult:result.user})
         this.setState({blog:result.blog})
@@ -156,7 +156,7 @@ class home extends React.Component {
                                 className="d-flex flex-row align-items-center">
                                     <img
                                     className="rounded-circle"
-                                    src={'http://localhost:8000'+item.profile_pic}
+                                    src={url+item.profile_pic}
                                     width="55"
                                     height="55"
                                     />
@@ -191,7 +191,7 @@ class home extends React.Component {
                                 <div className="userDetail row">
                                     <div className="col-lg-1">
                                         <img className="homeProfile-pic"
-                                             src={'http://127.0.0.1:8000/media/' + item.profile_pic}/>
+                                             src={url+'media/' + item.profile_pic}/>
                                     </div>
 
                                     <div className="col-lg-9" style={{marginLeft: '-20px'}}>
@@ -221,14 +221,14 @@ class home extends React.Component {
                                 <article className="postcard light yellow">
                                     <a className="postcard__img_link" href="#">
                                         <img className="postcard__img"
-                                             src={'http://localhost:8000' + item.thumbnail}
+                                             src={url.slice(0, -1) + item.thumbnail}
                                              alt="Image Title"/>
                                     </a>
                                     <div className="postcard__text t-dark">
                                         <h1 className="postcard__title yellow">{item.title.substring(0, 25) + '...'}</h1>
                                         <div className="postcard__subtitle small">
                                             <time dateTime="2020-05-25 12:00:00">
-                                                <i className="fas fa-calendar-alt mr-2"></i>{item.timeStamp}</time>
+                                                <i className="fas fa-calendar-alt mr-2"/>{item.timeStamp}</time>
                                         </div>
                                         <div className="postcard__bar"></div>
                                         <div
@@ -244,9 +244,9 @@ class home extends React.Component {
                                                 setTimeout(this.like,1);
                                             }}>
                                                 {item.CheckLikes?(
-                                                        <img src='http://localhost:8000/media/images/redHeart.png' height={'35px'}/>
+                                                        <img src={url + 'media/images/redHeart.png'} height={'35px'}/>
                                                     ):(
-                                                        <img src='http://localhost:8000/media/images/heart2.png' height={'35px'}/>
+                                                        <img src={url+'media/images/heart2.png'} height={'35px'}/>
                                                     )}
                                                 <p className="btn_font">{item.like.length} Likes</p>
                                             </div>
@@ -279,7 +279,7 @@ class home extends React.Component {
                                                                                 <div className="d-flex flex-row user-info">
                                                                                     <img
                                                                                         className="rounded-circle"
-                                                                                        src={'http://127.0.0.1:8000/media/' + comnt.profile_pic}
+                                                                                        src={url+'/media/' + comnt.profile_pic}
                                                                                         width="40"/>
                                                                                         <div
                                                                                             className="d-flex flex-column justify-content-start ml-2">

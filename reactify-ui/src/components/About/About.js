@@ -11,18 +11,18 @@ class About extends React.Component {
 
     componentDidMount() {
         this.test()
-        console.log(this.state.response)
     }
 
     test = () => {
-        let endpoint = `http://127.0.0.1:8000/query-test/`
+        let endpoint = `testapi/`
         let token = this.props.user.token
 
         axios
             .get(endpoint, token)
             .then((res)=>{
                     let responseData = res.data;
-                    this.setState({response: JSON.stringify(responseData.data)})
+                    this.setState({response: responseData.data})
+                    console.log({data: responseData})
                 })
     }
 
@@ -31,7 +31,9 @@ class About extends React.Component {
         return (
             <div>
               <h1>{this.props.user.username} - About page</h1>
-                <div>{this.state.response}</div>
+                <div>{this.state.response?this.state.response.map((item, index)=>(
+                    item
+                )):null}</div>
             </div>
         );
     }

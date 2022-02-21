@@ -3,7 +3,7 @@ import './navbar.css'
 import {Link} from "react-router-dom";
 import {connect} from "react-redux";
 import {notifications, userLogin} from "../../Store/actions/actions";
-import {axios} from "../../Store/actions/actions";
+import {axios, url, wsUrl} from "../../Store/actions/actions";
 
 class navbar extends React.Component {
 
@@ -36,7 +36,7 @@ class navbar extends React.Component {
     }
 
     realTimeNotifications = async () => {
-        let ws = await new WebSocket(`ws://127.0.0.1:8000/ws/notify/${this.props.user.username}`)
+        let ws = await new WebSocket(`${wsUrl}ws/notify/${this.props.user.username}`)
 
         ws.onopen = await function () {
             console.log('Websocket connection open...')
@@ -127,7 +127,7 @@ class navbar extends React.Component {
                         <li className="nav-item nav-item_2 pl-4 pl-md-0 ml-0 ml-md-4 dropdown">
                           <Link to={''} className="nav-link nav_link_2 dropdown-toggle dropdown_toggle_2" id="navbarDropdownMenuLink" role="button"
                              aria-expanded="false">
-                              <img src='http://localhost:8000/media/images/bell2.png' height={'28px'}/>
+                              <img src={url+'media/images/bell2.png'} height={'28px'}/>
                               {quantity || quantity > 0?
                                 <span className="notiDot">
                                 <p className='notiDotText' id='notiDotText'>{quantity}</p>
