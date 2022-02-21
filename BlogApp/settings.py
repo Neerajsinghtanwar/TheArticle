@@ -25,8 +25,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-zo9l28+lajrfw1vezmyu!-*$6i$$ssy*&ase)m#4&6m44odjax'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-# DEBUG = True
-DEBUG = False   # For production
+DEBUG = True
+# DEBUG = False   # For production
 #
 ALLOWED_HOSTS = ['*']
 # ALLOWED_HOSTS = ['15.206.147.220']   # For production
@@ -67,8 +67,6 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-
-    # 'blog.middlewares.MyMiddleware',
 ]
 
 ROOT_URLCONF = 'BlogApp.urls'
@@ -76,7 +74,7 @@ ROOT_URLCONF = 'BlogApp.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'build')],
+        'DIRS': [os.path.join(BASE_DIR, 'static')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -92,16 +90,8 @@ TEMPLATES = [
 WSGI_APPLICATION = 'BlogApp.wsgi.application'
 ASGI_APPLICATION = 'BlogApp.asgi.application'
 
-
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
-
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': BASE_DIR / 'db.sqlite3',
-#     }
-# }
 
 DATABASES = {
     'default': {
@@ -112,11 +102,6 @@ DATABASES = {
         'HOST': 'localhost'
     }
 }
-
-# import dj_database_url
-# db_from_env = dj_database_url.config(conn_max_age=600)
-# DATABASES['default'].update(db_from_env)
-
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
@@ -155,8 +140,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
-STATIC_DIR = os.path.join(BASE_DIR, 'build', 'static')
+STATIC_DIR = os.path.join(BASE_DIR, 'static')
 
 STATICFILES_DIRS = [STATIC_DIR]
 
@@ -164,12 +148,6 @@ STATICFILES_DIRS = [STATIC_DIR]
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-
-# INTERNAL_IPS = [
-    # ...
-    # "127.0.0.1",
-    # ...
-# ]
 
 
 CHANNEL_LAYERS = {
@@ -196,21 +174,30 @@ CKEDITOR_CONFIGS = {
 
 CORS_ORIGIN_ALLOW_ALL = True
 
-CORS_ALLOW_CREDENTIALS = True
+CORS_ALLOW_METHODS = [
+    "DELETE",
+    "GET",
+    "OPTIONS",
+    "PATCH",
+    "POST",
+    "PUT",
+]
+
+CORS_ALLOW_HEADERS = [
+    "accept",
+    "accept-encoding",
+    "authorization",
+    "content-type",
+    "dnt",
+    "origin",
+    "user-agent",
+    "x-csrftoken",
+    "x-requested-with",
+]
 
 # CORS_ALLOWED_ORIGINS = [
 #     "http://localhost:3000"
 # ]
-
-
-# REST_FRAMEWORK = {
-#     'DEFAULT_AUTHENTICATION_CLASSES':(
-#         'rest_framework_simplejwt.authentication.JWTAuthentication',
-#     ),
-#     'DEFAULT_PERMISSION_CLASSES':(
-#         'rest_framework.permissions.IsAuthenticated',
-#     )
-# }
 
 # Define token expiry time in simple jwt:-
 SIMPLE_JWT = {
@@ -221,9 +208,6 @@ SIMPLE_JWT = {
 }
 
 CELERY_BROKER_URL = 'redis://127.0.0.1:6379'
-
-# CELERY_BROKER_URL = os.environ['REDIS_URL']   # For production
-
 CELERY_RESULT_BACKEND = 'redis://127.0.0.1:6379'
 CELERY_ACCEPT_CONTENT = ['application/json']
 CELERY_RESULT_SERIALIZER = 'json'
@@ -233,4 +217,3 @@ CELERY_TIMEZONE = 'Asia/Kolkata'
 import django
 django.setup()
 
-# BASE_URL = 'http://15.206.147.220/'
