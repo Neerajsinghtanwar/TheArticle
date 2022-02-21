@@ -29,7 +29,7 @@ DEBUG = True
 # DEBUG = False   # For production
 #
 ALLOWED_HOSTS = ['*']
-# ALLOWED_HOSTS = ['*']   # For production
+# ALLOWED_HOSTS = ['192.168.43.57']   # For production
 
 # Application definition
 
@@ -165,18 +165,18 @@ STATICFILES_DIRS = [STATIC_DIR]
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-INTERNAL_IPS = [
+# INTERNAL_IPS = [
     # ...
     # "127.0.0.1",
     # ...
-]
+# ]
 
 
 CHANNEL_LAYERS = {
     "default": {
         "BACKEND": "channels_redis.core.RedisChannelLayer",
         "CONFIG": {
-            # "hosts": [("127.0.0.1", 6379)],
+            "hosts": [("127.0.0.1", 6379)],
             # "hosts": [os.environ.get('REDIS_URL', 'redis://localhost:6379')],   # For production
         },
     },
@@ -202,10 +202,10 @@ CORS_ALLOW_CREDENTIALS = True
 #     "http://localhost:3000"
 # ]
 
-CORS_ALLOWED_ORIGINS = [
-    "http://localhost:3000"
+# CORS_ALLOWED_ORIGINS = [
+#     "http://localhost:3000"
     # "http://the-aarticle.herokuapp.com"
-]
+# ]
 
 
 
