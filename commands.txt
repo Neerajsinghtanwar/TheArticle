@@ -18,3 +18,33 @@ CREATE USER postgresuser WITH PASSWORD 'password123';
 
 GRANT ALL PRIVILEGES ON DATABASE the_article_db TO postgresuser;
 
+
+
+[Unit]
+Description=gunicorn daemon
+Requires=gunicorn.socket
+After=network.target
+
+[Service]
+User=ubuntu
+Group=www-data
+WorkingDirectory=/home/ubuntu/TheArticle
+ExecStart=/home/ubuntu/TheArticle/venv/bin/gunicorn \
+          --access-logfile - \
+          -k uvicorn.workers.UvicornWorker \
+          --workers 3 \
+          --bind unix:/run/gunicorn.sock \
+          myproject.asgi:application
+
+[Install]
+WantedBy=multi-user.target
+
+
+gunicorn --bind 0.0.0.0:8000 BlogApp.wsgi
+
+
+
+gunicorn --access-logfile - --workers 3 --bind unix:/run/gunicorn.sock BlogApp.wsgi:application
+
+
+gunicorn --bind 0.0.0.0:8000 BlogApp.asgi -w 4 -k uvicorn.workers.UvicornWorker
