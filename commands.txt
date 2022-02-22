@@ -9,4 +9,12 @@ sudo -i -u postgres
 psql
 CREATE DATABASE blogapp;
 
-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
+
+ALTER ROLE postgresuser SET client_encoding TO 'utf8';
+ALTER ROLE postgresuser SET default_transaction_isolation TO 'read committed';
+ALTER ROLE postgresuser SET timezone TO 'Asia/Kolkata';
+
+CREATE USER postgresuser WITH PASSWORD 'password123';
+
+GRANT ALL PRIVILEGES ON DATABASE the_article_db TO postgresuser;
+

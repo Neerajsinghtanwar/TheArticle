@@ -195,26 +195,23 @@ CKEDITOR_CONFIGS = {
 
 CORS_ORIGIN_ALLOW_ALL = True
 
-CORS_ORIGIN_WHITELIST = [
-    'http://the-aarticle.herokuapp.com',
-]
+CORS_ALLOW_CREDENTIALS = True
 
-CORS_ALLOW_HEADERS = [
-    "access-control-allow-origin",
-]
-
-
-# CORS_ALLOW_CREDENTIALS = True
-
-# CORS_ALLOWED_ORIGINS = [
-#     "http://localhost:3000"
+# CORS_ORIGIN_WHITELIST = [
+#     "http://localhost:3000",
+#     "https://the-artcles.herokuapp.com",
+#     "http://the-artcles.herokuapp.com",
+# ]
+#
+# CORS_ALLOW_HEADERS = [
+#     "access-control-allow-origin",
 # ]
 
-# CORS_ALLOWED_ORIGINS = [
-#     "http://localhost:3000"
-    # "http://the-aarticle.herokuapp.com"
-# ]
 
+# CORS_ALLOWED_ORIGINS = [
+#     "http://localhost:3000",
+#     "http://the-artcles.herokuapp.com",
+# ]
 
 
 # REST_FRAMEWORK = {
@@ -246,3 +243,9 @@ CELERY_TIMEZONE = 'Asia/Kolkata'
 
 import django
 django.setup()
+
+
+
+
+
+
