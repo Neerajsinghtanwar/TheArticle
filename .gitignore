@@ -4,7 +4,6 @@ media/background
 media/thumbnail
 media/profile
 __pycache__
-Procfile
 db.sqlite3
 commands.txt
 celerybeat-schedule
