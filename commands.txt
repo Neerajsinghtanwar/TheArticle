@@ -26,18 +26,34 @@ Requires=gunicorn.socket
 After=network.target
 
 [Service]
-User=ubuntu
+User=neeraj
 Group=www-data
-WorkingDirectory=/home/ubuntu/TheArticle
-ExecStart=/home/ubuntu/TheArticle/venv/bin/gunicorn \
+WorkingDirectory=/home/neeraj/Desktop/TheArticle
+ExecStart=/home/neeraj/Desktop/TheArticle/venv/bin/gunicorn \
           --access-logfile - \
           -k uvicorn.workers.UvicornWorker \
           --workers 3 \
           --bind unix:/run/gunicorn.sock \
-          myproject.asgi:application
+          BlogApp.asgi:application
 
 [Install]
 WantedBy=multi-user.target
+
+
+
+server {
+    listen 80;
+    server_name 192.168.43.57;
+
+    location = /favicon.ico { access_log off; log_not_found off; }
+
+
+    location / {
+        include proxy_params;
+        proxy_pass http://unix:/run/gunicorn.sock;
+    }
+}
+
 
 
 gunicorn --bind 0.0.0.0:8000 BlogApp.wsgi
@@ -48,3 +64,5 @@ gunicorn --access-logfile - --workers 3 --bind unix:/run/gunicorn.sock BlogApp.w
 
 
 gunicorn --bind 0.0.0.0:8000 BlogApp.asgi -w 4 -k uvicorn.workers.UvicornWorker
+
+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

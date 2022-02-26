@@ -59,7 +59,7 @@ CKEDITOR_UPLOAD_PATH = 'uploads/'
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
-    'whitenoise.middleware.WhiteNoiseMiddleware',
+    # 'whitenoise.middleware.WhiteNoiseMiddleware',
     "corsheaders.middleware.CorsMiddleware",
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -96,22 +96,22 @@ ASGI_APPLICATION = 'BlogApp.asgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': BASE_DIR / 'db.sqlite3',
-#     }
-# }
-
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'the_article_db',
-        'USER': 'postgres',
-        'PASSWORD': 'password123',
-        'HOST': 'localhost'
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'the_article_db',
+#         'USER': 'postgres',
+#         'PASSWORD': 'password123',
+#         'HOST': 'localhost'
+#     }
+# }
 
 # import dj_database_url
 # db_from_env = dj_database_url.config(conn_max_age=600)
@@ -193,15 +193,20 @@ CKEDITOR_CONFIGS = {
     },
 }
 
-CORS_ORIGIN_ALLOW_ALL = True
+CORS_ORIGIN_ALLOW_ALL = False
 
-CORS_ALLOW_CREDENTIALS = True
+# CORS_ALLOW_CREDENTIALS = True
+#
+CORS_ORIGIN_WHITELIST = [
+    "http://localhost:3000",
+    "https://the-artcles.herokuapp.com",
+    "http://the-artcles.herokuapp.com",
+]
 
-# CORS_ORIGIN_WHITELIST = [
-#     "http://localhost:3000",
-#     "https://the-artcles.herokuapp.com",
-#     "http://the-artcles.herokuapp.com",
-# ]
+CORS_ORIGIN_REGEX_WHITELIST = [
+    "http://localhost:3000",
+]
+
 #
 # CORS_ALLOW_HEADERS = [
 #     "access-control-allow-origin",
