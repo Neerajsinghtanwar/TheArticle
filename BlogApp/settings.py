@@ -178,40 +178,21 @@ CKEDITOR_CONFIGS = {
     },
 }
 
-CORS_ORIGIN_ALLOW_ALL = True
+CORS_ORIGIN_ALLOW_ALL = False
 
-CORS_ALLOW_CREDENTIALS = True
-
-# CORS_ORIGIN_WHITELIST = [
-#     "http://localhost:3000",
-#     "https://the-artcles.herokuapp.com",
-#     "http://the-artcles.herokuapp.com",
-# ]
-
-CORS_ALLOW_METHODS = [
-    "DELETE",
-    "GET",
-    "OPTIONS",
-    "PATCH",
-    "POST",
-    "PUT",
+# CORS_ALLOW_CREDENTIALS = True
+#
+CORS_ORIGIN_WHITELIST = [
+    "http://localhost:3000",
+    "https://the-articles.herokuapp.com",
+    "http://the-articles.herokuapp.com",
 ]
 
-# CORS_ALLOW_HEADERS = [
-#     "accept",
-#     "accept-encoding",
-#     "authorization",
-#     "content-type",
-#     "dnt",
-#     "origin",
-#     "user-agent",
-#     "x-csrftoken",
-#     "x-requested-with",
-# ]
-
-# CORS_ALLOWED_ORIGINS = [
-#     "http://localhost:3000"
-# ]
+CORS_ORIGIN_REGEX_WHITELIST = [
+    "http://localhost:3000",
+    "https://the-articles.herokuapp.com",
+    "http://the-articles.herokuapp.com",
+]
 
 # Define token expiry time in simple jwt:-
 SIMPLE_JWT = {
