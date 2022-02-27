@@ -204,7 +204,7 @@ class PostCommentApi(APIView):
         content = obj
         msg = text
         text = "comment's on your article"
-        img = 'http://localhost:8000/media/' + str(blogger.profile_pic)
+        img = 'media/' + str(blogger.profile_pic)
         commentNotify(user, blogger, content, text, msg, img)
 
         return JsonResponse({'success': True, 'msg': 'Comment posted successfully.'})
@@ -230,7 +230,7 @@ class LikeBlogApi(APIView):
             blogger = blogger_obj
             content = blog
             text = 'likes your article'
-            img = 'http://localhost:8000/media/'+str(blogger.profile_pic)
+            img = 'media/' + str(blogger.profile_pic)
 
             likeNotify(user, blogger, content, text, img)
             msg = 'like successfully'
@@ -258,7 +258,7 @@ class CommentLikeApi(APIView):
             blogger = blogger_obj
             content = comnt
             text = 'likes your comment'
-            img = 'http://localhost:8000/media/'+str(blogger.profile_pic)
+            img = 'media/' + str(blogger.profile_pic)
 
             likeNotify(user, blogger, content, text, img)
             msg = 'like successfully'
