@@ -65,4 +65,4 @@ gunicorn --access-logfile - --workers 3 --bind unix:/run/gunicorn.sock BlogApp.w
 
 gunicorn --bind 0.0.0.0:8000 BlogApp.asgi -w 4 -k uvicorn.workers.UvicornWorker
 
-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
+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
