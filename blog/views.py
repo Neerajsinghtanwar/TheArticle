@@ -137,7 +137,7 @@ class BlogApi(APIView):
         Blog.objects.create(
             user = blogger,
             title = request.data.get('title'),
-            category = request.data.get('category'),
+            category = 'world' if request.data.get('category')=='null' else request.data.get('category'),
             description = request.data.get('description'),
             thumbnail = thumbnail,
             content = request.data.get('content'),
