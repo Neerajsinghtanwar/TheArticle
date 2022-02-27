@@ -39,35 +39,35 @@ class UserRegisterApi(APIView):
             firstName = request.data['firstName']
             lastName = request.data['lastName']
 
-            low, up, num, spl = 0, 0, 0, 0
-            if len(password) >= 8:
-                for i in password:
-                    if i.islower():
-                        low += 1
+            # low, up, num, spl = 0, 0, 0, 0
+            # if len(password) >= 8:
+            #     for i in password:
+            #         if i.islower():
+            #             low += 1
+            #
+            #         if i.isupper():
+            #             up += 1
+            #
+            #         if i.isnumeric():
+            #             num += 1
+            #
+            #         if re.search(i, "!@#$%^&*()-_=+"):
+            #             spl += 1
+            # else:
+            #     return JsonResponse({'success': False, 'msg': 'Your password contains at least 8 characters.'})
+            #
+            # if (low >= 1 and up >= 1 and num >= 1 and spl >= 1):
+            user = User.objects.create_user(username, email, password)
+            user.first_name = firstName
+            user.last_name = lastName
+            user.save()
 
-                    if i.isupper():
-                        up += 1
+            Blogger.objects.create(user=user)
 
-                    if i.isnumeric():
-                        num += 1
+            return JsonResponse({'success': True, 'msg': 'Congratulations your registeration completed successfully.'})
 
-                    if re.search(i, "!@#$%^&*()-_=+"):
-                        spl += 1
-            else:
-                return JsonResponse({'success': False, 'msg': 'Your password contains at least 8 characters.'})
-
-            if (low >= 1 and up >= 1 and num >= 1 and spl >= 1):
-                user = User.objects.create_user(username, email, password)
-                user.first_name = firstName
-                user.last_name = lastName
-                user.save()
-
-                Blogger.objects.create(user=user)
-
-                return JsonResponse({'success': True, 'msg': 'Congratulations your registeration completed successfully.'})
-
-            return JsonResponse({'success': False,
-                                 'msg': 'Your password contains lowercase, uppercase, numbers, special-characters.'})
+            # return JsonResponse({'success': False,
+            #                      'msg': 'Your password contains lowercase, uppercase, numbers, special-characters.'})
         except Exception as e:
             print(e)
             return JsonResponse({'success': False,

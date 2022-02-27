@@ -125,14 +125,12 @@ class BlogApi(APIView):
         return JsonResponse(context)
 
     def post(self, request):
-        # print(request.data)
         current_user = request.user
 
-        if request.data.get('thumbnail') == 'null' :
+        if request.data.get('thumbnail') == 'null':
             thumbnail = 'images/thumbnail.jpeg'
         else:
             thumbnail = request.FILES['thumbnail']
-            print(thumbnail)
 
         user_obj = User.objects.get(username=current_user)
         blogger = Blogger.objects.filter(user=user_obj).first()
@@ -153,7 +151,6 @@ class EditBlogApi(APIView):
     permission_classes = [IsAuthenticated]
 
     def get(self, request, slug):
-        print('slug-----------', slug)
         blog = Blog.objects.filter(slug=slug)
         context = dict()
         context['blog'] = EditBlogSerializer(blog, many=True).data
@@ -178,7 +175,6 @@ class EditBlogApi(APIView):
         return JsonResponse({'success':True, 'msg':'Congratulations your article updated successfully.'})
 
     def delete(self, request, slug):
-        print(slug)
         blog = Blog.objects.get(slug=slug)
         blog.delete()
         return Response({'success':True, 'msg':'Article deleted successfully.'})
@@ -277,6 +273,7 @@ class SearchApi(APIView):
     def get(self, request, search_data):
         current_user = request.user
         user = Blogger.objects.filter(user__username=current_user).annotate(blockedUsers=F('blocked_by_users__username')).values_list('blockedUsers', flat=True)
+        user = list(user)
 
         context = dict()
         if search_data == 'e-m-p-t-y':
@@ -367,32 +364,8 @@ class BlockUserApi(APIView):
         return JsonResponse({'success': False, 'error': 'somethig went wrong.'})
 
 
-# from django.views.generic import TemplateView
-# from django.views.decorators.cache import never_cache
-#
-# index = never_cache(TemplateView.as_view(template_name='index.html'))
+from django.views.generic import TemplateView
+from django.views.decorators.cache import never_cache
 
+index = never_cache(TemplateView.as_view(template_name='index.html'))
 
-
-class TestApi(APIView):
-
-    def get(self, request):
-        catList = []
-        for i in vars(Categories):
-            if '_' in i:
-                continue
-            else:
-                catList.append(i.lower())
-
-        context = dict()
-        context['name1'] = 'Neeraj'
-        context['name2'] = 'Neerajd'
-        context['name3'] = 'Neerfdfdaj'
-        context['name4'] = 'Neefraj'
-        context['name5'] = 'Neerfdaj'
-        context['name6'] = 'Neerafdgj'
-        context['name7'] = 'Neerfdaj'
-        context['name8'] = 'Neerfdaj'
-        context['name88'] = 'Needfraj'
-        context['name9'] = 'Neerdfaj'
-        return JsonResponse(context)

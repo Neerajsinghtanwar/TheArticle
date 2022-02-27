@@ -7,7 +7,7 @@ celery -A BlogApp beat -l INFO
 
 sudo -i -u postgres
 psql
-CREATE DATABASE blogapp;
+CREATE DATABASE the_article_db;
 
 
 ALTER ROLE postgresuser SET client_encoding TO 'utf8';
