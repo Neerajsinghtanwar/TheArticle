@@ -184,14 +184,14 @@ CORS_ORIGIN_ALLOW_ALL = False
 #
 CORS_ORIGIN_WHITELIST = [
     "http://localhost:3000",
-    "https://the-articles.herokuapp.com",
-    "http://the-articles.herokuapp.com",
+    "http://the-aarticles.herokuapp.com/signup",
+    "https://the-aarticles.herokuapp.com/signup",
 ]
 
 CORS_ORIGIN_REGEX_WHITELIST = [
     "http://localhost:3000",
-    "https://the-articles.herokuapp.com",
-    "http://the-articles.herokuapp.com",
+    "http://the-aarticles.herokuapp.com/signup",
+    "https://the-aarticles.herokuapp.com/signup",
 ]
 
 # Define token expiry time in simple jwt:-
