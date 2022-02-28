@@ -8,8 +8,9 @@ from blog.models import *
 @shared_task()
 def sleepy(duration):
     sleep(duration)
-    if duration==5:
-        Notification.objects.all().delete()
+    noti = Notification.objects.all()
+    if noti:
+        noti.delete()
         name = 'delete.....'
     else:
         name = 'not delete....'
