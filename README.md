@@ -1,5 +1,5 @@
 
-# <--------------------AWS Deployement-------------------->
+# <------------------------------AWS Deployement------------------------------>
 
 ### Install packages.....
 sudo apt update
@@ -223,7 +223,7 @@ sudo supervisorctl restart The_Articles_celery_beat
 
 
 
-# <--------------------IMPORTANT NOTE-------------------->
+# <-----------------------------IMPORTANT NOTE----------------------------->
 ### If you perform any changes in code, then allways run these commands.....
 sudo systemctl restart gunicorn
 
