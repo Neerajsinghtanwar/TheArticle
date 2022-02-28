@@ -1,0 +1,166 @@
+[2022-02-28 08:55:50,331: INFO/MainProcess] Connected to redis://127.0.0.1:6379//
+[2022-02-28 08:55:50,335: INFO/MainProcess] mingle: searching for neighbors
+[2022-02-28 08:55:51,344: INFO/MainProcess] mingle: all alone
+[2022-02-28 08:55:51,370: WARNING/MainProcess] /home/neeraj/Desktop/TheArticle/venv/lib/python3.9/site-packages/celery/fixups/django.py:203: UserWarning: Using settings.DEBUG leads to a memory
+            leak, never use this setting in production environments!
+  warnings.warn('''Using settings.DEBUG leads to a memory
+
+[2022-02-28 08:55:51,370: INFO/MainProcess] celery@neeraj ready.
+
+worker: Warm shutdown (MainProcess)
+[2022-02-28 08:56:32,883: INFO/MainProcess] Connected to redis://127.0.0.1:6379//
+[2022-02-28 08:56:32,888: INFO/MainProcess] mingle: searching for neighbors
+[2022-02-28 08:56:33,899: INFO/MainProcess] mingle: all alone
+[2022-02-28 08:56:33,910: WARNING/MainProcess] /home/neeraj/Desktop/TheArticle/venv/lib/python3.9/site-packages/celery/fixups/django.py:203: UserWarning: Using settings.DEBUG leads to a memory
+            leak, never use this setting in production environments!
+  warnings.warn('''Using settings.DEBUG leads to a memory
+
+[2022-02-28 08:56:33,910: INFO/MainProcess] celery@neeraj ready.
+[2022-02-28 08:57:25,549: INFO/MainProcess] Task accounts.tasks.sleepy[2a033a92-eb58-462a-b779-d5f7920c66ae] received
+[2022-02-28 08:57:25,783: INFO/MainProcess] Task accounts.tasks.sleepy[c4320b55-1d02-4758-b174-ac7d66ed585e] received
+[2022-02-28 08:57:26,032: INFO/MainProcess] Task accounts.tasks.sleepy[a7c17392-3c3c-4a71-9f5a-f43c6c5d5f5f] received
+[2022-02-28 08:57:30,563: INFO/ForkPoolWorker-2] Task accounts.tasks.sleepy[2a033a92-eb58-462a-b779-d5f7920c66ae] succeeded in 5.0134041049996085s: 'run sleepy task.....'
+[2022-02-28 08:57:30,799: INFO/ForkPoolWorker-4] Task accounts.tasks.sleepy[c4320b55-1d02-4758-b174-ac7d66ed585e] succeeded in 5.014956707000238s: 'run sleepy task.....'
+[2022-02-28 08:57:31,040: INFO/ForkPoolWorker-1] Task accounts.tasks.sleepy[a7c17392-3c3c-4a71-9f5a-f43c6c5d5f5f] succeeded in 5.007216379000056s: 'run sleepy task.....'
+[2022-02-28 08:59:37,813: INFO/MainProcess] Task accounts.tasks.sleepy[6c79ccb2-a399-4323-bbf7-239f84f10d55] received
+[2022-02-28 08:59:47,827: INFO/ForkPoolWorker-2] Task accounts.tasks.sleepy[6c79ccb2-a399-4323-bbf7-239f84f10d55] succeeded in 10.012674961999437s: 'run sleepy task.....'
+[2022-02-28 09:00:28,935: INFO/MainProcess] Task accounts.tasks.sleepy[becadf83-3940-47c4-8732-06c4e9448a08] received
+[2022-02-28 09:00:30,048: INFO/MainProcess] Task accounts.tasks.sleepy[6dc8670d-0875-436a-8a2c-49051804add0] received
+[2022-02-28 09:00:31,284: INFO/MainProcess] Task accounts.tasks.sleepy[ed254383-f419-42b3-889e-3fba713329b9] received
+[2022-02-28 09:00:38,946: INFO/ForkPoolWorker-2] Task accounts.tasks.sleepy[becadf83-3940-47c4-8732-06c4e9448a08] succeeded in 10.010136796999177s: 'run sleepy task.....'
+[2022-02-28 09:00:40,059: INFO/ForkPoolWorker-4] Task accounts.tasks.sleepy[6dc8670d-0875-436a-8a2c-49051804add0] succeeded in 10.01025872899936s: 'run sleepy task.....'
+[2022-02-28 09:00:41,297: INFO/ForkPoolWorker-1] Task accounts.tasks.sleepy[ed254383-f419-42b3-889e-3fba713329b9] succeeded in 10.01195209100024s: 'run sleepy task.....'
+
+worker: Warm shutdown (MainProcess)
+[2022-02-28 09:03:12,246: INFO/MainProcess] Connected to redis://127.0.0.1:6379//
+[2022-02-28 09:03:12,251: INFO/MainProcess] mingle: searching for neighbors
+[2022-02-28 09:03:13,266: INFO/MainProcess] mingle: all alone
+[2022-02-28 09:03:13,288: WARNING/MainProcess] /home/neeraj/Desktop/TheArticle/venv/lib/python3.9/site-packages/celery/fixups/django.py:203: UserWarning: Using settings.DEBUG leads to a memory
+            leak, never use this setting in production environments!
+  warnings.warn('''Using settings.DEBUG leads to a memory
+
+[2022-02-28 09:03:13,289: INFO/MainProcess] celery@neeraj ready.
+[2022-02-28 09:03:36,100: INFO/MainProcess] Task accounts.tasks.sleepy[bbee7599-24b4-4b07-8fea-110383f91c76] received
+[2022-02-28 09:03:41,112: INFO/ForkPoolWorker-2] Task accounts.tasks.sleepy[bbee7599-24b4-4b07-8fea-110383f91c76] succeeded in 5.011479506999422s: 'run sleepy task again.....'
+[2022-02-28 09:04:22,628: INFO/MainProcess] Task accounts.tasks.sleepy[77cc9ea9-4bff-470f-b026-d6173c594f59] received
+[2022-02-28 09:04:27,636: INFO/ForkPoolWorker-2] Task accounts.tasks.sleepy[77cc9ea9-4bff-470f-b026-d6173c594f59] succeeded in 5.00710863400036s: 'run sleepy task again.....'
+[2022-02-28 09:05:13,269: INFO/MainProcess] Task accounts.tasks.sleepy[77003684-a4e1-467d-9c3d-df5ddee19470] received
+[2022-02-28 09:05:18,274: INFO/ForkPoolWorker-2] Task accounts.tasks.sleepy[77003684-a4e1-467d-9c3d-df5ddee19470] succeeded in 5.004801144999874s: 'run sleepy task again.....'
+[2022-02-28 09:05:58,965: INFO/MainProcess] Task accounts.tasks.sleepy[3730d59d-d2c0-4df0-820a-98b9b1ca8f43] received
+[2022-02-28 09:06:03,974: INFO/ForkPoolWorker-2] Task accounts.tasks.sleepy[3730d59d-d2c0-4df0-820a-98b9b1ca8f43] succeeded in 5.007817817000614s: 'run sleepy task again.....'
+[2022-02-28 09:08:08,361: INFO/MainProcess] Task accounts.tasks.sleepy[9f709e1f-65de-400f-ad5b-b170cfb4bb5c] received
+[2022-02-28 09:08:11,449: INFO/MainProcess] Task accounts.tasks.sleepy[1f724cda-8e2f-4802-a4be-399418a6a4ad] received
+[2022-02-28 09:08:13,367: INFO/ForkPoolWorker-2] Task accounts.tasks.sleepy[9f709e1f-65de-400f-ad5b-b170cfb4bb5c] succeeded in 5.005152560999704s: 'run sleepy task again.....'
+[2022-02-28 09:08:16,463: INFO/ForkPoolWorker-4] Task accounts.tasks.sleepy[1f724cda-8e2f-4802-a4be-399418a6a4ad] succeeded in 5.013605166000161s: 'run sleepy task again.....'
+[2022-02-28 09:09:15,685: INFO/MainProcess] Task accounts.tasks.sleepy[c94de70e-5a32-42ac-b45d-7be45440e682] received
+[2022-02-28 09:09:20,692: INFO/ForkPoolWorker-2] Task accounts.tasks.sleepy[c94de70e-5a32-42ac-b45d-7be45440e682] succeeded in 5.00596882300033s: 'run sleepy task again.....'
+[2022-02-28 09:09:51,096: INFO/MainProcess] Task accounts.tasks.sleepy[c9a45971-9d1a-4d49-8658-89087085ebb5] received
+[2022-02-28 09:09:52,299: INFO/MainProcess] Task accounts.tasks.sleepy[4705b00f-eefb-4bee-868e-98c3d86e2054] received
+[2022-02-28 09:09:56,104: INFO/ForkPoolWorker-2] Task accounts.tasks.sleepy[c9a45971-9d1a-4d49-8658-89087085ebb5] succeeded in 5.006793493000259s: 'run sleepy task again.....'
+[2022-02-28 09:09:57,304: INFO/ForkPoolWorker-4] Task accounts.tasks.sleepy[4705b00f-eefb-4bee-868e-98c3d86e2054] succeeded in 5.004071098000168s: 'run sleepy task again.....'
+[2022-02-28 09:16:03,678: INFO/MainProcess] Task accounts.tasks.sleepy[e831c0ee-6c1c-4723-86a3-d467769c68a4] received
+[2022-02-28 09:16:04,174: INFO/MainProcess] Task accounts.tasks.sleepy[de32ddee-af37-43bd-9f54-6fe433c36526] received
+[2022-02-28 09:16:08,683: INFO/ForkPoolWorker-2] Task accounts.tasks.sleepy[e831c0ee-6c1c-4723-86a3-d467769c68a4] succeeded in 5.004605154999808s: 'run sleepy task again.....'
+[2022-02-28 09:16:09,182: INFO/ForkPoolWorker-4] Task accounts.tasks.sleepy[de32ddee-af37-43bd-9f54-6fe433c36526] succeeded in 5.006953164999686s: 'run sleepy task again.....'
+[2022-02-28 09:16:10,595: INFO/MainProcess] Task accounts.tasks.sleepy[96d691bb-eac1-4d24-84d1-dd20d0050843] received
+[2022-02-28 09:16:15,599: INFO/ForkPoolWorker-2] Task accounts.tasks.sleepy[96d691bb-eac1-4d24-84d1-dd20d0050843] succeeded in 5.003618052000093s: 'run sleepy task again.....'
+[2022-02-28 09:16:15,789: INFO/MainProcess] Task accounts.tasks.sleepy[07387edb-95c7-4f49-a443-7ec35bcc8855] received
+[2022-02-28 09:16:16,494: INFO/MainProcess] Task accounts.tasks.sleepy[46177bbf-fef1-4787-af55-7e3ef5354131] received
+[2022-02-28 09:16:20,794: INFO/ForkPoolWorker-2] Task accounts.tasks.sleepy[07387edb-95c7-4f49-a443-7ec35bcc8855] succeeded in 5.004483278000407s: 'run sleepy task again.....'
+[2022-02-28 09:16:21,503: INFO/ForkPoolWorker-4] Task accounts.tasks.sleepy[46177bbf-fef1-4787-af55-7e3ef5354131] succeeded in 5.0076964909994786s: 'run sleepy task again.....'
+
+worker: Warm shutdown (MainProcess)
+[2022-02-28 09:17:07,739: INFO/MainProcess] Connected to redis://127.0.0.1:6379//
+[2022-02-28 09:17:07,742: INFO/MainProcess] mingle: searching for neighbors
+[2022-02-28 09:17:08,754: INFO/MainProcess] mingle: all alone
+[2022-02-28 09:17:08,779: WARNING/MainProcess] /home/neeraj/Desktop/TheArticle/venv/lib/python3.9/site-packages/celery/fixups/django.py:203: UserWarning: Using settings.DEBUG leads to a memory
+            leak, never use this setting in production environments!
+  warnings.warn('''Using settings.DEBUG leads to a memory
+
+[2022-02-28 09:17:08,779: INFO/MainProcess] celery@neeraj ready.
+[2022-02-28 09:17:19,197: INFO/MainProcess] Task accounts.tasks.sleepy[a147ec99-6fee-4f34-9195-0287994c47e6] received
+[2022-02-28 09:17:24,246: INFO/ForkPoolWorker-2] Task accounts.tasks.sleepy[a147ec99-6fee-4f34-9195-0287994c47e6] succeeded in 5.04804280099961s: 'delete.....'
+
+worker: Warm shutdown (MainProcess)
+[2022-02-28 10:47:18,399: INFO/MainProcess] Connected to redis://127.0.0.1:6379//
+[2022-02-28 10:47:18,404: INFO/MainProcess] mingle: searching for neighbors
+[2022-02-28 10:47:19,413: INFO/MainProcess] mingle: all alone
+[2022-02-28 10:47:19,422: WARNING/MainProcess] /home/neeraj/Desktop/TheArticle/venv/lib/python3.9/site-packages/celery/fixups/django.py:203: UserWarning: Using settings.DEBUG leads to a memory
+            leak, never use this setting in production environments!
+  warnings.warn('''Using settings.DEBUG leads to a memory
+
+[2022-02-28 10:47:19,422: INFO/MainProcess] celery@neeraj ready.
+
+worker: Warm shutdown (MainProcess)
+[2022-02-28 10:48:32,509: INFO/MainProcess] Connected to redis://127.0.0.1:6379//
+[2022-02-28 10:48:32,513: INFO/MainProcess] mingle: searching for neighbors
+[2022-02-28 10:48:33,522: INFO/MainProcess] mingle: all alone
+[2022-02-28 10:48:33,551: WARNING/MainProcess] /home/neeraj/Desktop/TheArticle/venv/lib/python3.9/site-packages/celery/fixups/django.py:203: UserWarning: Using settings.DEBUG leads to a memory
+            leak, never use this setting in production environments!
+  warnings.warn('''Using settings.DEBUG leads to a memory
+
+[2022-02-28 10:48:33,551: INFO/MainProcess] celery@neeraj ready.
+[2022-02-28 10:48:35,403: INFO/MainProcess] Task accounts.tasks.deleteNotifications[bc3486c6-7ea8-435a-8e89-5885244e607f] received
+[2022-02-28 10:48:35,416: INFO/ForkPoolWorker-2] Task accounts.tasks.deleteNotifications[bc3486c6-7ea8-435a-8e89-5885244e607f] succeeded in 0.011984284999925876s: 'no notifications.................'
+[2022-02-28 10:48:40,402: INFO/MainProcess] Task accounts.tasks.deleteNotifications[06c25f02-04db-4d8c-b9bf-a19a73f467e9] received
+[2022-02-28 10:48:40,427: INFO/ForkPoolWorker-2] Task accounts.tasks.deleteNotifications[06c25f02-04db-4d8c-b9bf-a19a73f467e9] succeeded in 0.02358481800001755s: 'no notifications.................'
+[2022-02-28 10:48:45,402: INFO/MainProcess] Task accounts.tasks.deleteNotifications[06539228-e27c-47d1-8d10-d13245b94bde] received
+[2022-02-28 10:48:45,426: INFO/ForkPoolWorker-2] Task accounts.tasks.deleteNotifications[06539228-e27c-47d1-8d10-d13245b94bde] succeeded in 0.02231446099904133s: 'no notifications.................'
+[2022-02-28 10:48:50,398: INFO/MainProcess] Task accounts.tasks.deleteNotifications[ca75c901-cdea-449f-bb7c-fcac613bf31a] received
+[2022-02-28 10:48:50,406: INFO/ForkPoolWorker-2] Task accounts.tasks.deleteNotifications[ca75c901-cdea-449f-bb7c-fcac613bf31a] succeeded in 0.007671176999792806s: 'no notifications.................'
+[2022-02-28 10:48:55,401: INFO/MainProcess] Task accounts.tasks.deleteNotifications[b04e68a8-8fbb-4d21-b24c-bd9ac73a6ff0] received
+[2022-02-28 10:48:55,427: INFO/ForkPoolWorker-2] Task accounts.tasks.deleteNotifications[b04e68a8-8fbb-4d21-b24c-bd9ac73a6ff0] succeeded in 0.023400114998366917s: 'no notifications.................'
+[2022-02-28 10:49:00,402: INFO/MainProcess] Task accounts.tasks.deleteNotifications[85045bfe-00c4-4f76-ad4c-5f3ff8856407] received
+[2022-02-28 10:49:00,429: INFO/ForkPoolWorker-2] Task accounts.tasks.deleteNotifications[85045bfe-00c4-4f76-ad4c-5f3ff8856407] succeeded in 0.02496975800022483s: 'no notifications.................'
+[2022-02-28 10:49:05,403: INFO/MainProcess] Task accounts.tasks.deleteNotifications[0e5aaaaa-7df4-473c-9966-a4b6b53546f7] received
+[2022-02-28 10:49:05,428: INFO/ForkPoolWorker-2] Task accounts.tasks.deleteNotifications[0e5aaaaa-7df4-473c-9966-a4b6b53546f7] succeeded in 0.0222351329994126s: 'no notifications.................'
+[2022-02-28 10:49:10,404: INFO/MainProcess] Task accounts.tasks.deleteNotifications[98dbc0fc-8b49-4d08-afc8-9f581776ee3f] received
+[2022-02-28 10:49:10,437: INFO/ForkPoolWorker-2] Task accounts.tasks.deleteNotifications[98dbc0fc-8b49-4d08-afc8-9f581776ee3f] succeeded in 0.029601922000438208s: 'no notifications.................'
+[2022-02-28 10:49:15,403: INFO/MainProcess] Task accounts.tasks.deleteNotifications[659a946b-2276-4e9c-a304-5e6ac21e78a3] received
+[2022-02-28 10:49:15,424: INFO/ForkPoolWorker-2] Task accounts.tasks.deleteNotifications[659a946b-2276-4e9c-a304-5e6ac21e78a3] succeeded in 0.01878609699997469s: 'no notifications.................'
+[2022-02-28 10:49:20,403: INFO/MainProcess] Task accounts.tasks.deleteNotifications[447190f8-5097-4a8e-857a-d73a41df6221] received
+[2022-02-28 10:49:20,424: INFO/ForkPoolWorker-2] Task accounts.tasks.deleteNotifications[447190f8-5097-4a8e-857a-d73a41df6221] succeeded in 0.01885453800059622s: 'no notifications.................'
+[2022-02-28 10:49:25,404: INFO/MainProcess] Task accounts.tasks.deleteNotifications[798d6011-cdfe-48b7-8ba8-73561b996f71] received
+[2022-02-28 10:49:25,430: INFO/ForkPoolWorker-2] Task accounts.tasks.deleteNotifications[798d6011-cdfe-48b7-8ba8-73561b996f71] succeeded in 0.02447924099942611s: 'no notifications.................'
+[2022-02-28 10:49:30,403: INFO/MainProcess] Task accounts.tasks.deleteNotifications[3c4437db-db1a-43d3-91de-5b16910e75c2] received
+[2022-02-28 10:49:30,428: INFO/ForkPoolWorker-2] Task accounts.tasks.deleteNotifications[3c4437db-db1a-43d3-91de-5b16910e75c2] succeeded in 0.023636994999833405s: 'no notifications.................'
+[2022-02-28 10:49:35,400: INFO/MainProcess] Task accounts.tasks.deleteNotifications[0fe15676-9257-408b-99d7-b70a2004b9f5] received
+[2022-02-28 10:49:35,414: INFO/ForkPoolWorker-2] Task accounts.tasks.deleteNotifications[0fe15676-9257-408b-99d7-b70a2004b9f5] succeeded in 0.012998748999962118s: 'no notifications.................'
+[2022-02-28 10:49:40,399: INFO/MainProcess] Task accounts.tasks.deleteNotifications[32224fed-122a-4395-887b-d8149c987a86] received
+[2022-02-28 10:49:40,407: INFO/ForkPoolWorker-2] Task accounts.tasks.deleteNotifications[32224fed-122a-4395-887b-d8149c987a86] succeeded in 0.007232164000015473s: 'no notifications.................'
+[2022-02-28 10:49:45,403: INFO/MainProcess] Task accounts.tasks.deleteNotifications[7e50132d-7713-4242-8d56-df5060bb91df] received
+[2022-02-28 10:49:45,430: INFO/ForkPoolWorker-2] Task accounts.tasks.deleteNotifications[7e50132d-7713-4242-8d56-df5060bb91df] succeeded in 0.024580340999818873s: 'no notifications.................'
+[2022-02-28 10:49:50,403: INFO/MainProcess] Task accounts.tasks.deleteNotifications[8abf0b98-9d02-4dca-930b-1dc7e3fc0ba9] received
+[2022-02-28 10:49:50,427: INFO/ForkPoolWorker-2] Task accounts.tasks.deleteNotifications[8abf0b98-9d02-4dca-930b-1dc7e3fc0ba9] succeeded in 0.02230996699836396s: 'no notifications.................'
+[2022-02-28 10:49:55,403: INFO/MainProcess] Task accounts.tasks.deleteNotifications[8d649b25-4064-4f05-a472-ccd5ccb0130a] received
+[2022-02-28 10:49:55,428: INFO/ForkPoolWorker-2] Task accounts.tasks.deleteNotifications[8d649b25-4064-4f05-a472-ccd5ccb0130a] succeeded in 0.022577882999030408s: 'no notifications.................'
+[2022-02-28 10:50:00,403: INFO/MainProcess] Task accounts.tasks.deleteNotifications[ab958ec4-d6c3-4d45-9f14-2b6f02d65090] received
+[2022-02-28 10:50:00,427: INFO/ForkPoolWorker-2] Task accounts.tasks.deleteNotifications[ab958ec4-d6c3-4d45-9f14-2b6f02d65090] succeeded in 0.022849693999887677s: 'no notifications.................'
+[2022-02-28 10:50:05,404: INFO/MainProcess] Task accounts.tasks.deleteNotifications[7899e8ee-cbb6-4ca7-9725-063a9f08db25] received
+[2022-02-28 10:50:05,418: INFO/ForkPoolWorker-2] Task accounts.tasks.deleteNotifications[7899e8ee-cbb6-4ca7-9725-063a9f08db25] succeeded in 0.012558210000861436s: 'no notifications.................'
+[2022-02-28 10:50:10,403: INFO/MainProcess] Task accounts.tasks.deleteNotifications[be158d0a-dd3b-4846-b82c-84620c63759a] received
+[2022-02-28 10:50:10,427: INFO/ForkPoolWorker-2] Task accounts.tasks.deleteNotifications[be158d0a-dd3b-4846-b82c-84620c63759a] succeeded in 0.02239295399886032s: 'no notifications.................'
+[2022-02-28 10:50:15,403: INFO/MainProcess] Task accounts.tasks.deleteNotifications[0f297099-fe36-4bd0-b12f-a726d8405855] received
+[2022-02-28 10:50:15,429: INFO/ForkPoolWorker-2] Task accounts.tasks.deleteNotifications[0f297099-fe36-4bd0-b12f-a726d8405855] succeeded in 0.023632128000826924s: 'no notifications.................'
+[2022-02-28 10:50:20,403: INFO/MainProcess] Task accounts.tasks.deleteNotifications[dbfcd94b-0370-4642-854f-3615ef9339f8] received
+[2022-02-28 10:50:20,426: INFO/ForkPoolWorker-2] Task accounts.tasks.deleteNotifications[dbfcd94b-0370-4642-854f-3615ef9339f8] succeeded in 0.021629717000905657s: 'no notifications.................'
+[2022-02-28 10:50:25,404: INFO/MainProcess] Task accounts.tasks.deleteNotifications[a149dd77-e5fd-4a7b-b3c0-a9cb0a8725be] received
+[2022-02-28 10:50:25,431: INFO/ForkPoolWorker-2] Task accounts.tasks.deleteNotifications[a149dd77-e5fd-4a7b-b3c0-a9cb0a8725be] succeeded in 0.025570124000296346s: 'no notifications.................'
+[2022-02-28 10:50:30,400: INFO/MainProcess] Task accounts.tasks.deleteNotifications[958d781e-ef6e-4301-842e-4a47b6c54a07] received
+[2022-02-28 10:50:30,412: INFO/ForkPoolWorker-2] Task accounts.tasks.deleteNotifications[958d781e-ef6e-4301-842e-4a47b6c54a07] succeeded in 0.01058442700013984s: 'no notifications.................'
+[2022-02-28 10:50:35,404: INFO/MainProcess] Task accounts.tasks.deleteNotifications[5dc28371-32cd-4e44-bf61-08c423c53691] received
+[2022-02-28 10:50:35,429: INFO/ForkPoolWorker-2] Task accounts.tasks.deleteNotifications[5dc28371-32cd-4e44-bf61-08c423c53691] succeeded in 0.022805714999776683s: 'no notifications.................'
+[2022-02-28 10:50:40,400: INFO/MainProcess] Task accounts.tasks.deleteNotifications[c6844145-c44b-4f3a-b84c-fdeac07db070] received
+[2022-02-28 10:50:40,409: INFO/ForkPoolWorker-2] Task accounts.tasks.deleteNotifications[c6844145-c44b-4f3a-b84c-fdeac07db070] succeeded in 0.008291087999168667s: 'no notifications.................'
+[2022-02-28 10:50:45,405: INFO/MainProcess] Task accounts.tasks.deleteNotifications[6b110a33-fb2b-47c8-8c5c-c961d83e0b8f] received
+[2022-02-28 10:50:45,431: INFO/ForkPoolWorker-2] Task accounts.tasks.deleteNotifications[6b110a33-fb2b-47c8-8c5c-c961d83e0b8f] succeeded in 0.02385511700049392s: 'no notifications.................'
+[2022-02-28 10:50:50,404: INFO/MainProcess] Task accounts.tasks.deleteNotifications[701e3706-7ea2-4370-949b-c835746f729c] received
+[2022-02-28 10:50:50,429: INFO/ForkPoolWorker-2] Task accounts.tasks.deleteNotifications[701e3706-7ea2-4370-949b-c835746f729c] succeeded in 0.022474073999546818s: 'no notifications.................'
+[2022-02-28 10:50:55,404: INFO/MainProcess] Task accounts.tasks.deleteNotifications[3294aeb0-95bb-48ef-b304-3e584e4b4af2] received
+[2022-02-28 10:50:55,427: INFO/ForkPoolWorker-2] Task accounts.tasks.deleteNotifications[3294aeb0-95bb-48ef-b304-3e584e4b4af2] succeeded in 0.02200450300006196s: 'no notifications.................'
+[2022-02-28 10:51:00,401: INFO/MainProcess] Task accounts.tasks.deleteNotifications[e78198bb-5fcf-4c00-ba8e-d483a2243a19] received
+[2022-02-28 10:51:00,411: INFO/ForkPoolWorker-2] Task accounts.tasks.deleteNotifications[e78198bb-5fcf-4c00-ba8e-d483a2243a19] succeeded in 0.008721689999219961s: 'no notifications.................'
+[2022-02-28 10:51:05,406: INFO/MainProcess] Task accounts.tasks.deleteNotifications[86f6d953-6e16-478c-98f3-1133be243b73] received
+[2022-02-28 10:51:05,430: INFO/ForkPoolWorker-2] Task accounts.tasks.deleteNotifications[86f6d953-6e16-478c-98f3-1133be243b73] succeeded in 0.022077526000430225s: 'no notifications.................'
+[2022-02-28 10:51:10,407: INFO/MainProcess] Task accounts.tasks.deleteNotifications[515f8806-1484-4624-884b-d781fb6ffee4] received
+[2022-02-28 10:51:10,441: INFO/ForkPoolWorker-2] Task accounts.tasks.deleteNotifications[515f8806-1484-4624-884b-d781fb6ffee4] succeeded in 0.0322881989995949s: 'no notifications.................'

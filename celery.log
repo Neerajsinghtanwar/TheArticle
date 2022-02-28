@@ -1,0 +1,126 @@
+ 
+ -------------- celery@neeraj v5.2.3 (dawn-chorus)
+--- ***** ----- 
+-- ******* ---- Linux-5.13.0-30-generic-x86_64-with-glibc2.34 2022-02-28 08:55:50
+- *** --- * --- 
+- ** ---------- [config]
+- ** ---------- .> app:         BlogApp:0x7fda50305760
+- ** ---------- .> transport:   redis://127.0.0.1:6379//
+- ** ---------- .> results:     redis://127.0.0.1:6379/
+- *** --- * --- .> concurrency: 4 (prefork)
+-- ******* ---- .> task events: OFF (enable -E to monitor tasks in this worker)
+--- ***** ----- 
+ -------------- [queues]
+                .> celery           exchange=celery(direct) key=celery
+                
+
+[tasks]
+  . BlogApp.celery.debug_task
+  . accounts.tasks.deleteNotifications
+  . accounts.tasks.sleepy
+
+ 
+ -------------- celery@neeraj v5.2.3 (dawn-chorus)
+--- ***** ----- 
+-- ******* ---- Linux-5.13.0-30-generic-x86_64-with-glibc2.34 2022-02-28 08:56:32
+- *** --- * --- 
+- ** ---------- [config]
+- ** ---------- .> app:         BlogApp:0x7f018b5db760
+- ** ---------- .> transport:   redis://127.0.0.1:6379//
+- ** ---------- .> results:     redis://127.0.0.1:6379/
+- *** --- * --- .> concurrency: 4 (prefork)
+-- ******* ---- .> task events: OFF (enable -E to monitor tasks in this worker)
+--- ***** ----- 
+ -------------- [queues]
+                .> celery           exchange=celery(direct) key=celery
+                
+
+[tasks]
+  . BlogApp.celery.debug_task
+  . accounts.tasks.deleteNotifications
+  . accounts.tasks.sleepy
+
+ 
+ -------------- celery@neeraj v5.2.3 (dawn-chorus)
+--- ***** ----- 
+-- ******* ---- Linux-5.13.0-30-generic-x86_64-with-glibc2.34 2022-02-28 09:03:11
+- *** --- * --- 
+- ** ---------- [config]
+- ** ---------- .> app:         BlogApp:0x7f837bbbc760
+- ** ---------- .> transport:   redis://127.0.0.1:6379//
+- ** ---------- .> results:     redis://127.0.0.1:6379/
+- *** --- * --- .> concurrency: 4 (prefork)
+-- ******* ---- .> task events: OFF (enable -E to monitor tasks in this worker)
+--- ***** ----- 
+ -------------- [queues]
+                .> celery           exchange=celery(direct) key=celery
+                
+
+[tasks]
+  . BlogApp.celery.debug_task
+  . accounts.tasks.deleteNotifications
+  . accounts.tasks.sleepy
+
+ 
+ -------------- celery@neeraj v5.2.3 (dawn-chorus)
+--- ***** ----- 
+-- ******* ---- Linux-5.13.0-30-generic-x86_64-with-glibc2.34 2022-02-28 09:17:07
+- *** --- * --- 
+- ** ---------- [config]
+- ** ---------- .> app:         BlogApp:0x7ff62e467760
+- ** ---------- .> transport:   redis://127.0.0.1:6379//
+- ** ---------- .> results:     redis://127.0.0.1:6379/
+- *** --- * --- .> concurrency: 4 (prefork)
+-- ******* ---- .> task events: OFF (enable -E to monitor tasks in this worker)
+--- ***** ----- 
+ -------------- [queues]
+                .> celery           exchange=celery(direct) key=celery
+                
+
+[tasks]
+  . BlogApp.celery.debug_task
+  . accounts.tasks.deleteNotifications
+  . accounts.tasks.sleepy
+
+ 
+ -------------- celery@neeraj v5.2.3 (dawn-chorus)
+--- ***** ----- 
+-- ******* ---- Linux-5.13.0-30-generic-x86_64-with-glibc2.34 2022-02-28 10:47:18
+- *** --- * --- 
+- ** ---------- [config]
+- ** ---------- .> app:         BlogApp:0x7f4a4d3aa760
+- ** ---------- .> transport:   redis://127.0.0.1:6379//
+- ** ---------- .> results:     redis://127.0.0.1:6379/
+- *** --- * --- .> concurrency: 4 (prefork)
+-- ******* ---- .> task events: OFF (enable -E to monitor tasks in this worker)
+--- ***** ----- 
+ -------------- [queues]
+                .> celery           exchange=celery(direct) key=celery
+                
+
+[tasks]
+  . BlogApp.celery.debug_task
+  . accounts.tasks.deleteNotifications
+  . accounts.tasks.sleepy
+
+ 
+ -------------- celery@neeraj v5.2.3 (dawn-chorus)
+--- ***** ----- 
+-- ******* ---- Linux-5.13.0-30-generic-x86_64-with-glibc2.34 2022-02-28 10:48:32
+- *** --- * --- 
+- ** ---------- [config]
+- ** ---------- .> app:         BlogApp:0x7f56745b4760
+- ** ---------- .> transport:   redis://127.0.0.1:6379//
+- ** ---------- .> results:     redis://127.0.0.1:6379/
+- *** --- * --- .> concurrency: 4 (prefork)
+-- ******* ---- .> task events: OFF (enable -E to monitor tasks in this worker)
+--- ***** ----- 
+ -------------- [queues]
+                .> celery           exchange=celery(direct) key=celery
+                
+
+[tasks]
+  . BlogApp.celery.debug_task
+  . accounts.tasks.deleteNotifications
+  . accounts.tasks.sleepy
+

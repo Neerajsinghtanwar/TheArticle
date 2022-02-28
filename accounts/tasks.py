@@ -3,11 +3,16 @@ from time import sleep
 from notifications.models import *
 from django.db.models import Q
 from datetime import datetime, timedelta
+from blog.models import *
 
 @shared_task()
 def sleepy(duration):
     sleep(duration)
-    name = 'run sleepy task.....'
+    if duration==5:
+        Notification.objects.all().delete()
+        name = 'delete.....'
+    else:
+        name = 'not delete....'
     return name
 
 @shared_task()

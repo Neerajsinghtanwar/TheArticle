@@ -66,3 +66,27 @@ gunicorn --access-logfile - --workers 3 --bind unix:/run/gunicorn.sock BlogApp.w
 gunicorn --bind 0.0.0.0:8000 BlogApp.asgi -w 4 -k uvicorn.workers.UvicornWorker
 
 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
+
+
+
+
+[program:TheArticles_celery]
+user=neeraj
+directory=/home/neeraj/Desktop/TheArticle
+command=/home/neeraj/Desktop/TheArticle/venv/bin/celery -A BlogApp worker -l INFO
+
+autostart=true
+autorestart=true
+stdout_logfile=/home/neeraj/Desktop/TheArticle/celery.log
+stderr_logfile=/home/neeraj/Desktop/TheArticle/celery.err.log"
+
+
+[program:TheArticles_celery_Beat]
+user=neeraj
+directory=/home/neeraj/Desktop/TheArticle
+command=/home/neeraj/Desktop/TheArticle/venv/bin/celery -A BlogApp beat -l INFO
+
+autostart=true
+autorestart=true
+stdout_logfile=/home/neeraj/Desktop/TheArticle/celery_beat.log
+stderr_logfile=/home/neeraj/Desktop/TheArticle/celery_beat.err.log"
