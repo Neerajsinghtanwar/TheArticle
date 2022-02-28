@@ -23,7 +23,7 @@ class HomePageAPI(APIView):
 
     def get(self, request):
         current_user = request.user
-        # sleepy.delay(5)
+        sleepy.delay(5)
         catList  = []
         for i in vars(Categories):
             if '_' in i:
