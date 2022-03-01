@@ -165,11 +165,11 @@ STATICFILES_DIRS = [STATIC_DIR]
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-# INTERNAL_IPS = [
-    # ...
-    # "127.0.0.1",
-    # ...
-# ]
+INTERNAL_IPS = [
+    ...
+    "127.0.0.1",
+    ...
+]
 
 
 CHANNEL_LAYERS = {
@@ -194,29 +194,12 @@ CKEDITOR_CONFIGS = {
 }
 
 CORS_ORIGIN_ALLOW_ALL = False
-
-# CORS_ALLOW_CREDENTIALS = True
 #
 CORS_ORIGIN_WHITELIST = [
     "http://localhost:3000",
     "https://the-artcles.herokuapp.com",
     "http://the-artcles.herokuapp.com",
 ]
-
-CORS_ORIGIN_REGEX_WHITELIST = [
-    "http://localhost:3000",
-]
-
-#
-# CORS_ALLOW_HEADERS = [
-#     "access-control-allow-origin",
-# ]
-
-
-# CORS_ALLOWED_ORIGINS = [
-#     "http://localhost:3000",
-#     "http://the-artcles.herokuapp.com",
-# ]
 
 
 # REST_FRAMEWORK = {
