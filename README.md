@@ -9,7 +9,7 @@ sudo apt install python3-venv libpq-dev postgresql postgresql-contrib nginx curl
 sudo apt install supervisor
 
 
-##<--------------Setup Database PostgreSQL-------------->
+## <--------------Setup Database PostgreSQL-------------->
 
 ### Open PostgreSQL.....
 sudo -u postgres psql
@@ -31,7 +31,7 @@ ALTER ROLE postgresuser SET timezone TO 'Asia/Kolkata';
 GRANT ALL PRIVILEGES ON DATABASE the_article_db TO postgresuser;
 
 
-##<------------------------Setup Project------------------------->
+## <------------------------Setup Project------------------------->
 
 ### Clone Repositary.....
 git clone https://github.com/Neerajsinghtanwar/TheArticle.git
