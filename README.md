@@ -1,5 +1,5 @@
 
-# <------------------------------AWS Deployement------------------------------>
+# <-------------------------AWS Deployement------------------------->
 
 ### Install packages.....
 sudo apt update
@@ -223,7 +223,7 @@ sudo supervisorctl restart The_Articles_celery_beat
 
 
 
-# <-----------------------------IMPORTANT NOTE----------------------------->
+# <------------------------IMPORTANT NOTE------------------------>
 ### If you perform any changes in code, then allways run these commands.....
 sudo systemctl restart gunicorn
 
@@ -241,5 +241,5 @@ sudo supervisorctl restart The_Articles_celery_beat
 
 
 
-# <---------------------For more help checkout this page-------------------->
+# <----------------For more help checkout this page--------------->
 "https://www.digitalocean.com/community/tutorials/how-to-set-up-an-asgi-django-app-with-postgres-nginx-and-uvicorn-on-ubuntu-20-04"
