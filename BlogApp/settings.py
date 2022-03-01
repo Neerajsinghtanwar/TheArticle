@@ -145,8 +145,7 @@ USE_TZ = False
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
-STATIC_DIR = os.path.join(BASE_DIR, 'templates', 'static')
+STATIC_DIR = os.path.join(BASE_DIR, 'static')
 
 STATICFILES_DIRS = [STATIC_DIR]
 
@@ -183,14 +182,14 @@ CORS_ORIGIN_ALLOW_ALL = False
 #
 CORS_ORIGIN_WHITELIST = [
     "http://localhost:3000",
-    "http://the-aarticles.herokuapp.com/signup",
-    "https://the-aarticles.herokuapp.com/signup",
+    "http://the-aarticles.herokuapp.com",
+    "https://the-aarticles.herokuapp.com",
 ]
 
 CORS_ORIGIN_REGEX_WHITELIST = [
     "http://localhost:3000",
-    "http://the-aarticles.herokuapp.com/signup",
-    "https://the-aarticles.herokuapp.com/signup",
+    "http://the-aarticles.herokuapp.com",
+    "https://the-aarticles.herokuapp.com",
 ]
 
 # Define token expiry time in simple jwt:-
