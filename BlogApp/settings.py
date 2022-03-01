@@ -74,7 +74,7 @@ ROOT_URLCONF = 'BlogApp.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'build')],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -146,7 +146,7 @@ USE_TZ = False
 
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
-STATIC_DIR = os.path.join(BASE_DIR, 'build', 'static')
+STATIC_DIR = os.path.join(BASE_DIR, 'templates', 'static')
 
 STATICFILES_DIRS = [STATIC_DIR]
 
@@ -161,7 +161,6 @@ CHANNEL_LAYERS = {
         "BACKEND": "channels_redis.core.RedisChannelLayer",
         "CONFIG": {
             "hosts": [("127.0.0.1", 6379)],
-            # "hosts": [os.environ.get('REDIS_URL', 'redis://localhost:6379')],   # For production
         },
     },
 }
@@ -208,6 +207,12 @@ CELERY_ACCEPT_CONTENT = ['application/json']
 CELERY_RESULT_SERIALIZER = 'json'
 CELERY_TASK_SERIALIZER = 'json'
 CELERY_TIMEZONE = 'Asia/Kolkata'
+
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'theaarticles@gmail.com'
+EMAIL_PORT = 587
+EMAIL_HOST_PASSWORD = 'Asdfghjkl@12'
+EMAIL_USE_TLS = True
 
 import django
 django.setup()

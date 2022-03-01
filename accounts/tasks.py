@@ -4,17 +4,27 @@ from notifications.models import *
 from django.db.models import Q
 from datetime import datetime, timedelta
 from blog.models import *
+from django.core.mail import EmailMultiAlternatives
 
 @shared_task()
-def sleepy(duration):
-    sleep(duration)
-    noti = Notification.objects.all()
-    if noti:
-        noti.delete()
-        name = 'delete.....'
-    else:
-        name = 'not delete....'
-    return name
+def send_mail_task(*args, **kwargs):
+    subject = kwargs['subject']
+    message = kwargs['message']
+    str_template = kwargs['str_template']
+    email_from = kwargs['email_from']
+    recipient_list = kwargs['recipient_list']
+
+    email = EmailMultiAlternatives(
+        subject,
+        message,
+        email_from,
+        recipient_list
+    )
+
+    email.attach_alternative(str_template, "text/html")
+    email.send()
+
+    return args
 
 @shared_task()
 def deleteNotifications():
@@ -28,4 +38,3 @@ def deleteNotifications():
 
     else:
         return 'no notifications.................'
-

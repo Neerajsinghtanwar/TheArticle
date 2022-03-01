@@ -29,9 +29,6 @@ urlpatterns = [
     path('ckeditor/', include('ckeditor_uploader.urls')),
     path('get-token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
 
-    # path('__debug__/', include('debug_toolbar.urls')),
-
-    path('index/', index, name='index'),
 
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 

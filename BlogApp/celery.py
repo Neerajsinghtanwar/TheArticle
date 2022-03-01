@@ -19,8 +19,7 @@ app.autodiscover_tasks()
 app.conf.beat_schedule = {
     'delete seen-notifications every weak': {
         'task': 'accounts.tasks.deleteNotifications',
-        'schedule': 10.0,
-        # 'schedule': crontab(minute=0, hour=0)   #Execute daily at midnight.
+        'schedule': crontab(minute=0, hour=0)   #Execute daily at midnight.
     },
 }
 
