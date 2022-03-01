@@ -247,7 +247,7 @@ CELERY_TIMEZONE = 'Asia/Kolkata'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_HOST_USER = 'theaarticles@gmail.com'
 EMAIL_PORT = 587
-EMAIL_HOST_PASSWORD = 'Asdfghjkl@12'
+EMAIL_HOST_PASSWORD = ''
 EMAIL_USE_TLS = True
 
 import django
