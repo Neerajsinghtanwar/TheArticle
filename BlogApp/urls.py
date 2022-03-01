@@ -31,7 +31,7 @@ urlpatterns = [
 
     # path('__debug__/', include('debug_toolbar.urls')),
 
-    # path('index/', index, name='index'),
+    path('index/', index, name='index'),
 
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 

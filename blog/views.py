@@ -16,6 +16,7 @@ from time import sleep
 from accounts.tasks import *
 
 
+
 # Create your views here.
 class HomePageAPI(APIView):
     authentication_classes = [JWTAuthentication]
@@ -23,9 +24,7 @@ class HomePageAPI(APIView):
 
     def get(self, request):
         current_user = request.user
-        sleepy.delay(5)
-        # sleepy(5)
-        # Notification.objects.all().delete()
+
         catList  = []
         for i in vars(Categories):
             if '_' in i:
@@ -206,7 +205,7 @@ class PostCommentApi(APIView):
         content = obj
         msg = text
         text = "comment's on your article"
-        img = 'http://localhost:8000/media/' + str(blogger.profile_pic)
+        img = 'media/' + str(blogger.profile_pic)
         commentNotify(user, blogger, content, text, msg, img)
 
         return JsonResponse({'success': True, 'msg': 'Comment posted successfully.'})
@@ -232,7 +231,7 @@ class LikeBlogApi(APIView):
             blogger = blogger_obj
             content = blog
             text = 'likes your article'
-            img = 'http://localhost:8000/media/'+str(blogger.profile_pic)
+            img = 'media/'+str(blogger.profile_pic)
 
             likeNotify(user, blogger, content, text, img)
             msg = 'like successfully'
@@ -260,7 +259,7 @@ class CommentLikeApi(APIView):
             blogger = blogger_obj
             content = comnt
             text = 'likes your comment'
-            img = 'http://localhost:8000/media/'+str(blogger.profile_pic)
+            img = 'media/'+str(blogger.profile_pic)
 
             likeNotify(user, blogger, content, text, img)
             msg = 'like successfully'
@@ -369,5 +368,4 @@ class BlockUserApi(APIView):
 from django.views.generic import TemplateView
 from django.views.decorators.cache import never_cache
 
-index = never_cache(TemplateView.as_view(template_name='index.html'))
-
+index = never_cache(TemplateView.as_view(template_name='welcome_email.html'))

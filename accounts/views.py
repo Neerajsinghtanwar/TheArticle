@@ -4,6 +4,11 @@ from django.http import JsonResponse
 import json
 import re
 from django.db.models import Q
+from django.core.mail import EmailMultiAlternatives
+from django.template.loader import render_to_string
+from django.utils.html import strip_tags
+from .tasks import *
+from django.conf import settings
 
 # Create your views here.
 
@@ -63,6 +68,16 @@ class UserRegisterApi(APIView):
             user.save()
 
             Blogger.objects.create(user=user)
+
+            subject = 'Congratulations for register on The-Articles.'
+            str_template = render_to_string("welcome_email.html", {'name': firstName+' '+lastName})
+            message = strip_tags(str_template)
+            email_from = settings.EMAIL_HOST_USER
+            recipient_list = [email]
+
+            send_mail_task.apply_async(args=['Welcome Mail Sent'],
+                                       kwargs={'subject': subject, 'message': message, 'email_from': email_from,
+                                               'recipient_list': recipient_list, 'str_template': str_template})
 
             return JsonResponse({'success': True, 'msg': 'Congratulations your registeration completed successfully.'})
 
