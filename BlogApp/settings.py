@@ -184,12 +184,8 @@ CORS_ORIGIN_WHITELIST = [
     "http://localhost:3000",
     "http://the-aarticles.herokuapp.com",
     "https://the-aarticles.herokuapp.com",
-]
-
-CORS_ORIGIN_REGEX_WHITELIST = [
-    "http://localhost:3000",
-    "http://the-aarticles.herokuapp.com",
-    "https://the-aarticles.herokuapp.com",
+    "http://master.d1kwfkxx3xtruu.amplifyapp.com",
+    "https://master.d1kwfkxx3xtruu.amplifyapp.com"
 ]
 
 # Define token expiry time in simple jwt:-
