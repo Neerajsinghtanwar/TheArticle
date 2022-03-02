@@ -24,7 +24,7 @@ class Comment(CommonFields):
 
     text = models.TextField()
     like = models.ManyToManyField(Blogger, related_name='cLikes', blank=True)
-    slug = models.SlugField(max_length=50)
+    slug = models.SlugField(max_length=500)
 
     content_type = models.ForeignKey(ContentType, on_delete=models.CASCADE)
     object_id = models.PositiveIntegerField()

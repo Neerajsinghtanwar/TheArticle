@@ -19,7 +19,7 @@ class Notification(models.Model):
     created_by = models.ForeignKey(Blogger, on_delete=models.CASCADE)
     text = models.CharField(max_length=500)
     msg = models.CharField(max_length=500, null=True)
-    slug = models.SlugField(max_length=50, null=True)
+    slug = models.SlugField(max_length=500, null=True)
     timeStamp = models.DateTimeField(default=datetime.now)
     seen = models.BooleanField(default=False)
     image_url = models.CharField(max_length=200, null=True)
