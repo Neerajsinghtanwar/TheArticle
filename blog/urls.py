@@ -15,6 +15,4 @@ urlpatterns = [
     path('block', BlockUserApi.as_view()),
     path('change-image', ChangeImageApi.as_view(), name='changeImage'),
 
-    # path('testapi', TestApi.as_view()),
-
 ]

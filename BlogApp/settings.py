@@ -29,7 +29,6 @@ DEBUG = True
 # DEBUG = False   # For production
 #
 ALLOWED_HOSTS = ['*']
-# ALLOWED_HOSTS = ['192.168.43.57']   # For production
 
 # Application definition
 
@@ -67,8 +66,6 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-
-    # 'blog.middlewares.MyMiddleware',
 ]
 
 ROOT_URLCONF = 'BlogApp.urls'
@@ -92,17 +89,14 @@ TEMPLATES = [
 WSGI_APPLICATION = 'BlogApp.wsgi.application'
 ASGI_APPLICATION = 'BlogApp.asgi.application'
 
-
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
-
 # DATABASES = {
 #     'default': {
 #         'ENGINE': 'django.db.backends.sqlite3',
 #         'NAME': BASE_DIR / 'db.sqlite3',
 #     }
 # }
-
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
@@ -112,11 +106,6 @@ DATABASES = {
         'HOST': 'localhost'
     }
 }
-
-# import dj_database_url
-# db_from_env = dj_database_url.config(conn_max_age=600)
-# DATABASES['default'].update(db_from_env)
-
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
@@ -155,8 +144,7 @@ USE_TZ = False
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
-STATIC_DIR = os.path.join(BASE_DIR, 'templates', 'static')
+STATIC_DIR = os.path.join(BASE_DIR, 'static')
 
 STATICFILES_DIRS = [STATIC_DIR]
 
@@ -164,12 +152,6 @@ STATICFILES_DIRS = [STATIC_DIR]
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-
-# INTERNAL_IPS = [
-#     # ...
-#     "127.0.0.1",
-#     # ...
-# ]
 
 
 CHANNEL_LAYERS = {
@@ -194,22 +176,13 @@ CKEDITOR_CONFIGS = {
 }
 
 CORS_ORIGIN_ALLOW_ALL = False
+
+# CORS_ALLOW_CREDENTIALS = True
 #
 CORS_ORIGIN_WHITELIST = [
     "http://localhost:3000",
-    "https://the-artcles.herokuapp.com",
-    "http://the-artcles.herokuapp.com",
+    "http://the-aarticles.herokuapp.com",
 ]
-
-
-# REST_FRAMEWORK = {
-#     'DEFAULT_AUTHENTICATION_CLASSES':(
-#         'rest_framework_simplejwt.authentication.JWTAuthentication',
-#     ),
-#     'DEFAULT_PERMISSION_CLASSES':(
-#         'rest_framework.permissions.IsAuthenticated',
-#     )
-# }
 
 # Define token expiry time in simple jwt:-
 SIMPLE_JWT = {
@@ -226,7 +199,6 @@ CELERY_RESULT_SERIALIZER = 'json'
 CELERY_TASK_SERIALIZER = 'json'
 CELERY_TIMEZONE = 'Asia/Kolkata'
 
-
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_HOST_USER = 'theaarticles@gmail.com'
 EMAIL_PORT = 587
@@ -235,9 +207,3 @@ EMAIL_USE_TLS = True
 
 import django
 django.setup()
-
-
-
-
-
-

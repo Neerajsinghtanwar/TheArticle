@@ -38,4 +38,3 @@ def deleteNotifications():
 
     else:
         return 'no notifications.................'
-

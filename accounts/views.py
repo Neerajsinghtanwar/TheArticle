@@ -44,45 +44,45 @@ class UserRegisterApi(APIView):
             firstName = request.data['firstName']
             lastName = request.data['lastName']
 
-            # low, up, num, spl = 0, 0, 0, 0
-            # if len(password) >= 8:
-            #     for i in password:
-            #         if i.islower():
-            #             low += 1
-            #
-            #         if i.isupper():
-            #             up += 1
-            #
-            #         if i.isnumeric():
-            #             num += 1
-            #
-            #         if re.search(i, "!@#$%^&*()-_=+"):
-            #             spl += 1
-            # else:
-            #     return JsonResponse({'success': False, 'msg': 'Your password contains at least 8 characters.'})
-            #
-            # if (low >= 1 and up >= 1 and num >= 1 and spl >= 1):
-            user = User.objects.create_user(username, email, password)
-            user.first_name = firstName
-            user.last_name = lastName
-            user.save()
+            low, up, num, spl = 0, 0, 0, 0
+            if len(password) >= 8:
+                for i in password:
+                    if i.islower():
+                        low += 1
 
-            Blogger.objects.create(user=user)
+                    if i.isupper():
+                        up += 1
 
-            subject = 'Congratulations for register on The-Articles.'
-            str_template = render_to_string("welcome_email.html", {'name': firstName+' '+lastName})
-            message = strip_tags(str_template)
-            email_from = settings.EMAIL_HOST_USER
-            recipient_list = [email]
+                    if i.isnumeric():
+                        num += 1
 
-            send_mail_task.apply_async(args=['Welcome Mail Sent'],
-                                       kwargs={'subject': subject, 'message': message, 'email_from': email_from,
-                                               'recipient_list': recipient_list, 'str_template': str_template})
+                    if re.search(i, "!@#$%^&*()-_=+"):
+                        spl += 1
+            else:
+                return JsonResponse({'success': False, 'msg': 'Your password contains at least 8 characters.'})
 
-            return JsonResponse({'success': True, 'msg': 'Congratulations your registeration completed successfully.'})
+            if (low >= 1 and up >= 1 and num >= 1 and spl >= 1):
+                user = User.objects.create_user(username, email, password)
+                user.first_name = firstName
+                user.last_name = lastName
+                user.save()
 
-            # return JsonResponse({'success': False,
-            #                      'msg': 'Your password contains lowercase, uppercase, numbers, special-characters.'})
+                Blogger.objects.create(user=user)
+
+                subject = 'Congratulations for register on The-Articles.'
+                str_template = render_to_string("welcome_email.html", {'name': firstName + ' ' + lastName})
+                message = strip_tags(str_template)
+                email_from = settings.EMAIL_HOST_USER
+                recipient_list = [email]
+
+                send_mail_task.apply_async(args=['Welcome Mail Sent'],
+                                           kwargs={'subject': subject, 'message': message, 'email_from': email_from,
+                                                   'recipient_list': recipient_list, 'str_template': str_template})
+
+                return JsonResponse({'success': True, 'msg': 'Congratulations your registeration completed successfully.'})
+
+            return JsonResponse({'success': False,
+                                 'msg': 'Your password contains lowercase, uppercase, numbers, special-characters.'})
         except Exception as e:
             print(e)
             return JsonResponse({'success': False,

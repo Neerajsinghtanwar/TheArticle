@@ -16,7 +16,6 @@ from time import sleep
 from accounts.tasks import *
 
 
-
 # Create your views here.
 class HomePageAPI(APIView):
     authentication_classes = [JWTAuthentication]
@@ -24,7 +23,7 @@ class HomePageAPI(APIView):
 
     def get(self, request):
         current_user = request.user
-
+        # sleepy.delay(5)
         catList  = []
         for i in vars(Categories):
             if '_' in i:
@@ -231,7 +230,7 @@ class LikeBlogApi(APIView):
             blogger = blogger_obj
             content = blog
             text = 'likes your article'
-            img = 'media/'+str(blogger.profile_pic)
+            img = 'media/' + str(blogger.profile_pic)
 
             likeNotify(user, blogger, content, text, img)
             msg = 'like successfully'
@@ -259,7 +258,7 @@ class CommentLikeApi(APIView):
             blogger = blogger_obj
             content = comnt
             text = 'likes your comment'
-            img = 'media/'+str(blogger.profile_pic)
+            img = 'media/' + str(blogger.profile_pic)
 
             likeNotify(user, blogger, content, text, img)
             msg = 'like successfully'
@@ -363,9 +362,3 @@ class BlockUserApi(APIView):
             return JsonResponse({'success': True, 'msg': 'unblock successfully.'})
 
         return JsonResponse({'success': False, 'error': 'somethig went wrong.'})
-
-
-from django.views.generic import TemplateView
-from django.views.decorators.cache import never_cache
-
-index = never_cache(TemplateView.as_view(template_name='welcome_email.html'))
