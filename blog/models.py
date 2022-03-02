@@ -118,7 +118,7 @@ from django.contrib import admin
 # Register your models here.
 @admin.register(Blog)
 class BlogAdmin(admin.ModelAdmin):
-    list_display = ['id', 'user', 'title', 'slug', 'category', 'created_at', 'updated_at']
+    list_display = ['id', 'user', 'title', 'slug', 'created_at', 'updated_at']
 
 @admin.register(Comment)
 class CommentAdmin(admin.ModelAdmin):
