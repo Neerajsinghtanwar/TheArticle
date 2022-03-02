@@ -71,8 +71,8 @@ class Categories(models.TextChoices):
 class Blog(CommonFields):
     user = models.ForeignKey(Blogger, on_delete=models.CASCADE, related_name='blog')
 
-    title = models.CharField(max_length=50)
-    slug = models.SlugField(max_length=50)
+    title = models.CharField(max_length=500)
+    slug = models.SlugField(max_length=600)
     category = models.CharField(max_length=50, choices=Categories.choices, default=Categories.WORLD)
     description = models.TextField()
     content = RichTextUploadingField()
