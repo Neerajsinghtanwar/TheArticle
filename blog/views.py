@@ -24,6 +24,7 @@ class HomePageAPI(APIView):
     def get(self, request):
         current_user = request.user
         # sleepy.delay(5)
+        print('------------', Notification.objects.filter(user__username='ram').all())
         catList  = []
         for i in vars(Categories):
             if '_' in i:
@@ -132,6 +133,18 @@ class BlogApi(APIView):
         else:
             thumbnail = request.FILES['thumbnail']
 
+        # create slug
+        original_slug = slugify(request.data.get('title'))
+        queryset = Blog.objects.all().filter(slug__iexact=original_slug).count()
+
+        count = 1
+        slug = original_slug
+        while(queryset):
+            slug = original_slug + '-' + str(count)
+            count += 1
+            queryset = Blog.objects.all().filter(slug__iexact=slug).count()
+
+
         user_obj = User.objects.get(username=current_user)
         blogger = Blogger.objects.filter(user=user_obj).first()
         Blog.objects.create(
@@ -141,6 +154,7 @@ class BlogApi(APIView):
             description = request.data.get('description'),
             thumbnail = thumbnail,
             content = request.data.get('content'),
+            slug = slug
         )
 
         return JsonResponse({'success':True, 'msg':'Congratulations your article posted successfully.'})

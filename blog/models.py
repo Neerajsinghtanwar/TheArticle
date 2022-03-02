@@ -81,19 +81,6 @@ class Blog(CommonFields):
     comment = GenericRelation(Comment, related_query_name="blogComment")
     like = models.ManyToManyField(Blogger, related_name='likes', blank=True)
 
-    def save(self, *args, **kwargs):
-        original_slug = slugify(self.title)
-        queryset = Blog.objects.all().filter(slug__iexact=original_slug).count()
-
-        count = 1
-        slug = original_slug
-        while(queryset):
-            slug = original_slug + '-' + str(count)
-            count += 1
-            queryset = Blog.objects.all().filter(slug__iexact=slug).count()
-
-        self.slug = slug
-        super(Blog, self).save(*args, **kwargs)
 
     def __str__(self):
         return self.slug
