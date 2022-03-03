@@ -1,0 +1,189 @@
+ 
+ -------------- celery@ip-172-31-36-217 v5.2.3 (dawn-chorus)
+--- ***** ----- 
+-- ******* ---- Linux-5.11.0-1022-aws-x86_64-with-glibc2.29 2022-02-28 11:12:43
+- *** --- * --- 
+- ** ---------- [config]
+- ** ---------- .> app:         BlogApp:0x7fcfbf708790
+- ** ---------- .> transport:   redis://127.0.0.1:6379//
+- ** ---------- .> results:     redis://127.0.0.1:6379/
+- *** --- * --- .> concurrency: 1 (prefork)
+-- ******* ---- .> task events: OFF (enable -E to monitor tasks in this worker)
+--- ***** ----- 
+ -------------- [queues]
+                .> celery           exchange=celery(direct) key=celery
+                
+
+[tasks]
+  . BlogApp.celery.debug_task
+  . accounts.tasks.deleteNotifications
+  . accounts.tasks.sleepy
+
+ 
+ -------------- celery@ip-172-31-36-217 v5.2.3 (dawn-chorus)
+--- ***** ----- 
+-- ******* ---- Linux-5.11.0-1022-aws-x86_64-with-glibc2.29 2022-02-28 11:14:27
+- *** --- * --- 
+- ** ---------- [config]
+- ** ---------- .> app:         BlogApp:0x7f11779f3790
+- ** ---------- .> transport:   redis://127.0.0.1:6379//
+- ** ---------- .> results:     redis://127.0.0.1:6379/
+- *** --- * --- .> concurrency: 1 (prefork)
+-- ******* ---- .> task events: OFF (enable -E to monitor tasks in this worker)
+--- ***** ----- 
+ -------------- [queues]
+                .> celery           exchange=celery(direct) key=celery
+                
+
+[tasks]
+  . BlogApp.celery.debug_task
+  . accounts.tasks.deleteNotifications
+  . accounts.tasks.sleepy
+
+ 
+ -------------- celery@ip-172-31-36-217 v5.2.3 (dawn-chorus)
+--- ***** ----- 
+-- ******* ---- Linux-5.11.0-1022-aws-x86_64-with-glibc2.29 2022-02-28 11:25:55
+- *** --- * --- 
+- ** ---------- [config]
+- ** ---------- .> app:         BlogApp:0x7fd80244a790
+- ** ---------- .> transport:   redis://127.0.0.1:6379//
+- ** ---------- .> results:     redis://127.0.0.1:6379/
+- *** --- * --- .> concurrency: 1 (prefork)
+-- ******* ---- .> task events: OFF (enable -E to monitor tasks in this worker)
+--- ***** ----- 
+ -------------- [queues]
+                .> celery           exchange=celery(direct) key=celery
+                
+
+[tasks]
+  . BlogApp.celery.debug_task
+  . accounts.tasks.deleteNotifications
+  . accounts.tasks.sleepy
+
+ 
+ -------------- celery@ip-172-31-36-217 v5.2.3 (dawn-chorus)
+--- ***** ----- 
+-- ******* ---- Linux-5.11.0-1022-aws-x86_64-with-glibc2.29 2022-02-28 11:32:53
+- *** --- * --- 
+- ** ---------- [config]
+- ** ---------- .> app:         BlogApp:0x7fba53b95790
+- ** ---------- .> transport:   redis://127.0.0.1:6379//
+- ** ---------- .> results:     redis://127.0.0.1:6379/
+- *** --- * --- .> concurrency: 1 (prefork)
+-- ******* ---- .> task events: OFF (enable -E to monitor tasks in this worker)
+--- ***** ----- 
+ -------------- [queues]
+                .> celery           exchange=celery(direct) key=celery
+                
+
+[tasks]
+  . BlogApp.celery.debug_task
+  . accounts.tasks.deleteNotifications
+  . accounts.tasks.sleepy
+
+ 
+ -------------- celery@ip-172-31-36-217 v5.2.3 (dawn-chorus)
+--- ***** ----- 
+-- ******* ---- Linux-5.11.0-1022-aws-x86_64-with-glibc2.29 2022-03-01 17:49:50
+- *** --- * --- 
+- ** ---------- [config]
+- ** ---------- .> app:         BlogApp:0x7fed62bdf790
+- ** ---------- .> transport:   redis://127.0.0.1:6379//
+- ** ---------- .> results:     redis://127.0.0.1:6379/
+- *** --- * --- .> concurrency: 1 (prefork)
+-- ******* ---- .> task events: OFF (enable -E to monitor tasks in this worker)
+--- ***** ----- 
+ -------------- [queues]
+                .> celery           exchange=celery(direct) key=celery
+                
+
+[tasks]
+  . BlogApp.celery.debug_task
+  . accounts.tasks.deleteNotifications
+  . accounts.tasks.send_mail_task
+
+ 
+ -------------- celery@ip-172-31-36-217 v5.2.3 (dawn-chorus)
+--- ***** ----- 
+-- ******* ---- Linux-5.11.0-1022-aws-x86_64-with-glibc2.29 2022-03-02 15:58:32
+- *** --- * --- 
+- ** ---------- [config]
+- ** ---------- .> app:         BlogApp:0x7fc394dff790
+- ** ---------- .> transport:   redis://127.0.0.1:6379//
+- ** ---------- .> results:     redis://127.0.0.1:6379/
+- *** --- * --- .> concurrency: 1 (prefork)
+-- ******* ---- .> task events: OFF (enable -E to monitor tasks in this worker)
+--- ***** ----- 
+ -------------- [queues]
+                .> celery           exchange=celery(direct) key=celery
+                
+
+[tasks]
+  . BlogApp.celery.debug_task
+  . accounts.tasks.deleteNotifications
+  . accounts.tasks.send_mail_task
+
+ 
+ -------------- celery@ip-172-31-36-217 v5.2.3 (dawn-chorus)
+--- ***** ----- 
+-- ******* ---- Linux-5.11.0-1022-aws-x86_64-with-glibc2.29 2022-03-02 19:04:35
+- *** --- * --- 
+- ** ---------- [config]
+- ** ---------- .> app:         BlogApp:0x7f0266876790
+- ** ---------- .> transport:   redis://127.0.0.1:6379//
+- ** ---------- .> results:     redis://127.0.0.1:6379/
+- *** --- * --- .> concurrency: 1 (prefork)
+-- ******* ---- .> task events: OFF (enable -E to monitor tasks in this worker)
+--- ***** ----- 
+ -------------- [queues]
+                .> celery           exchange=celery(direct) key=celery
+                
+
+[tasks]
+  . BlogApp.celery.debug_task
+  . accounts.tasks.deleteNotifications
+  . accounts.tasks.send_mail_task
+
+ 
+ -------------- celery@ip-172-31-36-217 v5.2.3 (dawn-chorus)
+--- ***** ----- 
+-- ******* ---- Linux-5.11.0-1022-aws-x86_64-with-glibc2.29 2022-03-02 19:19:38
+- *** --- * --- 
+- ** ---------- [config]
+- ** ---------- .> app:         BlogApp:0x7f93a5fa7790
+- ** ---------- .> transport:   redis://127.0.0.1:6379//
+- ** ---------- .> results:     redis://127.0.0.1:6379/
+- *** --- * --- .> concurrency: 1 (prefork)
+-- ******* ---- .> task events: OFF (enable -E to monitor tasks in this worker)
+--- ***** ----- 
+ -------------- [queues]
+                .> celery           exchange=celery(direct) key=celery
+                
+
+[tasks]
+  . BlogApp.celery.debug_task
+  . accounts.tasks.deleteNotifications
+  . accounts.tasks.send_mail_task
+
+ 
+ -------------- celery@ip-172-31-36-217 v5.2.3 (dawn-chorus)
+--- ***** ----- 
+-- ******* ---- Linux-5.11.0-1022-aws-x86_64-with-glibc2.29 2022-03-02 19:50:05
+- *** --- * --- 
+- ** ---------- [config]
+- ** ---------- .> app:         BlogApp:0x7fbbb4cce790
+- ** ---------- .> transport:   redis://127.0.0.1:6379//
+- ** ---------- .> results:     redis://127.0.0.1:6379/
+- *** --- * --- .> concurrency: 1 (prefork)
+-- ******* ---- .> task events: OFF (enable -E to monitor tasks in this worker)
+--- ***** ----- 
+ -------------- [queues]
+                .> celery           exchange=celery(direct) key=celery
+                
+
+[tasks]
+  . BlogApp.celery.debug_task
+  . accounts.tasks.deleteNotifications
+  . accounts.tasks.send_mail_task
+
