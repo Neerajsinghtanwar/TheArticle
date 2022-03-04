@@ -1,0 +1,70 @@
+celery beat v5.2.3 (dawn-chorus) is starting.
+__    -    ... __   -        _
+LocalTime -> 2022-02-28 11:12:43
+Configuration ->
+    . broker -> redis://127.0.0.1:6379//
+    . loader -> celery.loaders.app.AppLoader
+    . scheduler -> celery.beat.PersistentScheduler
+    . db -> celerybeat-schedule
+    . logfile -> [stderr]@%INFO
+    . maxinterval -> 5.00 minutes (300s)
+celery beat v5.2.3 (dawn-chorus) is starting.
+__    -    ... __   -        _
+LocalTime -> 2022-02-28 11:20:02
+Configuration ->
+    . broker -> redis://127.0.0.1:6379//
+    . loader -> celery.loaders.app.AppLoader
+    . scheduler -> celery.beat.PersistentScheduler
+    . db -> celerybeat-schedule
+    . logfile -> [stderr]@%INFO
+    . maxinterval -> 5.00 minutes (300s)
+celery beat v5.2.3 (dawn-chorus) is starting.
+__    -    ... __   -        _
+LocalTime -> 2022-02-28 11:33:06
+Configuration ->
+    . broker -> redis://127.0.0.1:6379//
+    . loader -> celery.loaders.app.AppLoader
+    . scheduler -> celery.beat.PersistentScheduler
+    . db -> celerybeat-schedule
+    . logfile -> [stderr]@%INFO
+    . maxinterval -> 5.00 minutes (300s)
+celery beat v5.2.3 (dawn-chorus) is starting.
+__    -    ... __   -        _
+LocalTime -> 2022-03-01 17:49:56
+Configuration ->
+    . broker -> redis://127.0.0.1:6379//
+    . loader -> celery.loaders.app.AppLoader
+    . scheduler -> celery.beat.PersistentScheduler
+    . db -> celerybeat-schedule
+    . logfile -> [stderr]@%INFO
+    . maxinterval -> 5.00 minutes (300s)
+celery beat v5.2.3 (dawn-chorus) is starting.
+__    -    ... __   -        _
+LocalTime -> 2022-03-02 15:58:36
+Configuration ->
+    . broker -> redis://127.0.0.1:6379//
+    . loader -> celery.loaders.app.AppLoader
+    . scheduler -> celery.beat.PersistentScheduler
+    . db -> celerybeat-schedule
+    . logfile -> [stderr]@%INFO
+    . maxinterval -> 5.00 minutes (300s)
+celery beat v5.2.3 (dawn-chorus) is starting.
+__    -    ... __   -        _
+LocalTime -> 2022-03-02 19:04:41
+Configuration ->
+    . broker -> redis://127.0.0.1:6379//
+    . loader -> celery.loaders.app.AppLoader
+    . scheduler -> celery.beat.PersistentScheduler
+    . db -> celerybeat-schedule
+    . logfile -> [stderr]@%INFO
+    . maxinterval -> 5.00 minutes (300s)
+celery beat v5.2.3 (dawn-chorus) is starting.
+__    -    ... __   -        _
+LocalTime -> 2022-03-02 19:19:42
+Configuration ->
+    . broker -> redis://127.0.0.1:6379//
+    . loader -> celery.loaders.app.AppLoader
+    . scheduler -> celery.beat.PersistentScheduler
+    . db -> celerybeat-schedule
+    . logfile -> [stderr]@%INFO
+    . maxinterval -> 5.00 minutes (300s)
