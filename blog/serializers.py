@@ -124,8 +124,6 @@ class BlogSerializer(serializers.ModelSerializer):
             if sec.seconds<=60:
                 data = str(sec.seconds)+' seconds ago' if sec.seconds>1 else str(hour)+' second ago'
 
-            print()
-
         return data
 
 

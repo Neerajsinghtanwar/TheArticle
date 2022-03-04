@@ -126,7 +126,6 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
 # Internationalization
 # https://docs.djangoproject.com/en/3.2/topics/i18n/
 
@@ -152,7 +151,6 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-
 CHANNEL_LAYERS = {
     "default": {
         "BACKEND": "channels_redis.core.RedisChannelLayer",
@@ -162,10 +160,8 @@ CHANNEL_LAYERS = {
     },
 }
 
-
 MEDIA_URL = '/media/'
 MEDIA_ROOT = 'media/'
-
 
 CKEDITOR_CONFIGS = {
     'default': {

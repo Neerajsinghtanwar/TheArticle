@@ -23,11 +23,9 @@ class HomePageAPI(APIView):
 
     def get(self, request):
         current_user = request.user
-        # sleepy.delay(5)
-        print('------------', Notification.objects.filter(user__username='ram').all())
         catList  = []
         for i in vars(Categories):
-            if '_' in i:
+            if '_' in i or 'label' in i:
                 continue
             else:
                 catList.append(i)
